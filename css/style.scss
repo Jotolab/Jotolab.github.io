@@ -1,0 +1,106 @@
+//======== Variables ==============
+$white: #F5F8FF;
+$fontColor: #454553;
+$direction: ltr;
+$floatLeft: left;
+$floatRight: right;
+$image: url('images/blockbg.png');
+
+@if $direction == ltr {
+    $floatLeft: left;
+    $floatRight: right;
+} @else {
+    $floatLeft: right;
+    $floatRight: left;
+}
+//======== Styling ================
+body{
+    color: $fontColor;
+}
+
+
+.navbar-default{
+    background-color: transparent;
+    border: 0px;
+}
+
+.coverphoto {
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    height:700px;
+    margin-top:-20px;
+    align-items: center;
+    .cover-block {
+        padding-top: 350px;
+    }
+    img {
+        margin:10px;
+    }
+}
+.itemsList {
+    padding: 40px;
+    a{
+        cursor: pointer;
+    }
+}
+
+.leftImg{
+    img{
+        float: $floatRight;
+    }
+}
+.rightImg{
+    img{
+        float: $floatLeft;
+        height: 414px;
+    }
+}
+
+
+.new {
+    padding: 50px;
+    background: linear-gradient(to bottom, #e4e2df,#e4e2df);
+    color: $fontColor;
+    font-size: 17px;
+    p{
+        line-height:25px;
+    }
+}
+.footer{
+    background-color: #a12414;
+    color: #fff;
+    padding: 20px;
+}
+.itemDetails{
+    border: 1px dotted #000;
+    background-color: #f3f2f2;
+}
+.button {
+    margin-top: 20px;
+}
+.image{
+    margin-top: 20px;
+}
+.bestApp{
+    .stars{
+        padding:15px 0px;
+    }
+}
+.fullDescription{
+    p{
+        line-height:25px;
+    }
+}
+.summary {
+    h3{
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+    .info{
+        border-left:1px dotted graytext;
+        margin: 15px 0px;
+    }
+}
+//======== Classes to Extend ========
+
