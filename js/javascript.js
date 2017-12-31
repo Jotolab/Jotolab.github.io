@@ -3,12 +3,12 @@ $(document).ready(function(){
 
 // ======= Language Function ==========
   $("#en").on('click',function(){
-    var dir = $("html").attr("dir");
        $("html").attr("dir", "ltr");
+       $("html").attr("lang", "en");
   });
   $("#ar").on('click',function(){
-    var dir = $("html").attr("dir");
        $("html").attr("dir", "rtl");
+       $("html").attr("lang", "ar");
   }); // End Language Function
 
    //======= Carousael slider =======
@@ -30,10 +30,13 @@ $(document).ready(function(){
         .css("width", "100%");
 });
 
-
-$("#selectbtn").click(function(){
-  window.location.assign("uploadImages/index.html");
-});
+    $("#selectbtn").on('click', function () {
+        if ($("html").attr("lang") === "en") {
+            window.location.assign("uploadImages/en-index.html");
+        } else {
+            window.location.assign("uploadImages/ar-index.html");
+        }
+    });
 
 
     console.log('Going Good');

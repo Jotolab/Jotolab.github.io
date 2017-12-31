@@ -91,5 +91,13 @@ $(function(){
 
         return (bytes / 1000).toFixed(2) + ' KB';
     }
+    
+    $("#submitbtn").on('click', function(){
+        if ($("html").attr("lang") === "en"){
+        window.location.assign("../en-contact.html");
+    } else {
+        window.location.assign("../ar-contact.html");
+    }
+    });
 
 });
