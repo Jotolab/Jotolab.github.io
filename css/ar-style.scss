@@ -51,7 +51,7 @@ body{
     }
 }
 
-.howTo, .itemsList, .bestApp, .new, .footer {
+.howTo, .itemsList, .bestApp, .new, .footer, .itemIntro, .fullDescription, .summary, .itemDetails {
     ul{
         list-style: none;
     }
@@ -100,8 +100,14 @@ body{
         margin-top: 0px;
     }
     .info{
-        border-left:1px dotted graytext;
+        border-#{$floatLeft}:1px dotted graytext;
         margin: 15px 0px;
+    }
+    label{
+        float: $floatLeft;
+    }
+    input{
+        float: $floatRight;
     }
 }
 //======== Classes to Extend ========
