@@ -28,7 +28,7 @@ body {
 .howTo ul, .itemsList ul, .bestApp ul, .new ul, .footer ul {
   list-style: none; }
 .howTo ul li, .itemsList ul li, .bestApp ul li, .new ul li, .footer ul li {
-  float: left; }
+  float: right; }
 
 .new {
   padding: 50px;
@@ -66,4 +66,4 @@ body {
   border-left: 1px dotted graytext;
   margin: 15px 0px; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=ar-style.css.map */
