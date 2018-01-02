@@ -25,9 +25,9 @@ body {
 .rightImg img {
   height: 414px; }
 
-.howTo ul, .itemsList ul, .bestApp ul, .new ul, .footer ul {
+.howTo ul, .itemsList ul, .bestApp ul, .new ul, .footer ul, .itemIntro ul, .fullDescription ul, .summary ul, .itemDetails ul {
   list-style: none; }
-.howTo ul li, .itemsList ul li, .bestApp ul li, .new ul li, .footer ul li {
+.howTo ul li, .itemsList ul li, .bestApp ul li, .new ul li, .footer ul li, .itemIntro ul li, .fullDescription ul li, .summary ul li, .itemDetails ul li {
   float: left; }
 
 .new {

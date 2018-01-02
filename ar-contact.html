@@ -10,7 +10,7 @@
 
         <!-- Bootstrap -->
         <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/ar-style.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="ar.html"><p><b>Test Project</b></p></a>
+                        <a class="navbar-brand" href="ar.html"><p><b>جوتو لاب</b></p></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,7 +46,7 @@
                         <ul class="nav navbar-nav">
                             <li><a class="translate lang" href="en-contact.html" id="en" data-key="english" style="font-weight: bold;">إنجليزي</a></li>
                             <li><a class="translate lang" href="ar-contact.html" id="ar" data-key="arabic" style="font-weight: bold;">عربي</a></li>
-                         </ul>
+                        </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
@@ -55,32 +55,34 @@
         <div class="container">
             <div class="row">
                 <div class="itemDetails col-md-12">
-                    <div class="col-md-1 image">
+                    <ul>
+                    <li class="col-md-1 image">
                         <img src="images/c1.jpg" class="center-block img-responsive img-rounded">
-                    </div>
-                    <div class="col-md-2">
-                        <h3>Item Name:</h3>
-                        <p>Test</p>
-                    </div>
-                    <div class="col-md-2">
-                        <h3>Item Type:</h3>
-                        <p>Book Squar</p>
-                    </div>
-                    <div class="col-md-2">
-                        <h3>Item Size:</h3>
-                        <p>14 * 21 cm</p>
-                    </div>
-                    <div class="col-md-2">
-                        <h3>Quantity:</h3>
-                        <p>1</p>
-                    </div>
-                    <div class="col-md-1">
-                        <h3>Total:</h3>
-                        <p><b>40 JOD</b></p>
-                    </div>
-                    <div class="col-md-2">
-                        <button type="button" class="center-block btn btn-danger btn-lg button" name="button">Delete</button>
-                    </div>
+                    </li>
+                    <li class="col-md-2">
+                        <h3>إسم المنتج</h3>
+                        <p>المنتج الاول</p>
+                    </li>
+                    <li class="col-md-2">
+                        <h3>نوع المنتج</h3>
+                        <p>البوم صور</p>
+                    </li>
+                    <li class="col-md-2">
+                        <h3>حجم المنتج</h3>
+                        <p>١٤ * ٢١ سم</p>
+                    </li>
+                    <li class="col-md-2">
+                        <h3>العدد</h3>
+                        <p>١</p>
+                    </li>
+                    <li class="col-md-1">
+                        <h3>المجموع</h3>
+                        <p><b>٤٠ دينار</b></p>
+                    </li>
+                    <li class="col-md-2">
+                        <button type="button" class="center-block btn btn-danger btn-lg button" name="button">حذف</button>
+                    </li>
+                    </ul>
                 </div> <!--itemDetails -->
             </div>
         </div> <!-- conatiner -->
@@ -88,82 +90,89 @@
         <div class="summary">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5"> <!-- write code here -->  </div>
-                    <div class="col-md-7 info">
-                        <h3>Give us you Info please</h3>
-                        <form class="form-horizontal">
-                            <div class="form-group">
-                                <label for="firstName" class="col-sm-2 control-label">First Name</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="firstName" placeholder="Your First Name...">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName" class="col-sm-2 control-label">Last Name</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="lastName" placeholder="Your Last Name...">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label">Email</label>
-                                <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="email" placeholder="Your email">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Country</label>
-                                <div class="col-sm-2">
-                                    <select class="form-control">
-                                        <option>Jordan</option>
-                                        <option>Soudi Arabia</option>
-                                        <option>United Arab Emarits</option>
-                                    </select>
-                                </div>
-                                <label class="col-sm-1 control-label">City</label>
-                                <div class="col-sm-2">
-                                    <select class="form-control">
-                                        <option>Amman</option>
-                                        <option>Irbid</option>
-                                        <option>Zarqa</option>
-                                        <option>Karak</option>
-                                        <option>Jarash</option>
-                                        <option>Mafraq</option>
-                                        <option>Madaba</option>
-                                    </select>
-                                </div>
-                                <label for="address" class="col-sm-1 control-label">Address</label>
-                                <div class="col-sm-4">
-                                    <input type="text" class="form-control" id="address" placeholder="Your Address Here...">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="phoneNumber" class="col-sm-2 control-label">Phone Number</label>
-                                <div class="col-sm-10">
-                                    <input type="tel" class="form-control" id="phoneNumber" placeholder="Your Phone Number...">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="Comment" class="col-sm-2 control-label">Comment</label>
-                                <div class="col-sm-10">
-                                    <textarea class="form-control"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Remember me
-                                        </label>
+                    <ul>
+                        <li class="col-md-5"> <h1>حطلك صورة ترحيب</h1> </li>
+                        <li class="col-md-7 info">
+                            <h3>من فضلك! قم بتعبئة المعلومات</h3>
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="firstName" class="col-sm-2 control-label">First Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="firstName" placeholder="Your First Name...">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <button type="submit" class="btn btn-danger btn-lg">Submit</button>
+                                <div class="form-group">
+                                    <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="lastName" placeholder="Your Last Name...">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="email" placeholder="Your email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Country</label>
+                                    <div class="col-sm-2">
+                                        <select class="form-control">
+                                            <option>Jordan</option>
+                                            <option>Soudi Arabia</option>
+                                            <option>United Arab Emarits</option>
+                                        </select>
+                                    </div>
+                                    <label class="col-sm-1 control-label">City</label>
+                                    <div class="col-sm-2">
+                                        <select class="form-control">
+                                            <option>Amman</option>
+                                            <option>Irbid</option>
+                                            <option>Zarqa</option>
+                                            <option>Karak</option>
+                                            <option>Jarash</option>
+                                            <option>Mafraq</option>
+                                            <option>Madaba</option>
+                                        </select>
+                                    </div>
+                                    <label for="address" class="col-sm-1 control-label">Address</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="address" placeholder="Your Address Here...">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phoneNumber" class="col-sm-2 control-label">Phone Number</label>
+                                    <div class="col-sm-10">
+                                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Your Phone Number...">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Comment" class="col-sm-2 control-label">Comment</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> تذكرني
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox">أقبل <a>الاحكام و الشروط</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-danger btn-lg">أطلب الآن</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div> <!-- Summary -->
@@ -171,25 +180,29 @@
         <div class="footer">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 smallLogo">
-                        <img src="images/logo.png" width="40">
-                    </div>
-                    <div class="col-md-4 col-sm-12 copyRights text-center">
-                        <h5><a href="#">سياسة الخصوصية</a></h5>
-                    </div>
-                    <div class="col-md-4 col-sm-12 socialButtons">
-                        <h5>تواصل معنا</h5>
-                        <div class="col-md-1 col-sm-3 fb"><img src="images/fb.png" width="30"></div>
-                        <div class="col-md-1 col-sm-3 insta"><img src="images/insta.png" width="30"></div>
-                        <div class="col-md-1 col-sm-3 flikr"><img src="images/go.png" width="30"></div>
-                        <div class="col-md-1 col-sm-3 yt"><img src="images/fkr.png" width="30"></div>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <h6>&copy; جوتو لاب ٢٠١٨، جميع الحقوق محفوظة</h6>
-                    </div>
+                    <ul>
+                        <li class="col-md-4 col-sm-12 smallLogo">
+                            <img src="images/logo.png" width="40">
+                        </li>
+                        <li class="col-md-4 col-sm-12 copyRights text-center">
+                            <h5><a href="#">سياسة الخصوصية</a></h5>
+                            <h6>&copy; جوتو لاب ٢٠١٨، جميع الحقوق محفوظة</h6>
+                        </li>
+                        <li class="col-md-4 col-sm-12 socialButtons">
+                            <h5>تواصل معنا</h5>
+                            <ul>
+                                <li class="col-md-1 col-sm-3 fb"><img src="images/fb.png" width="30"></li>
+                                <li class="col-md-1 col-sm-3 insta"><img src="images/insta.png" width="30"></li>
+                                <li class="col-md-1 col-sm-3 flikr"><img src="images/go.png" width="30"></li>
+                                <li class="col-md-1 col-sm-3 yt"><img src="images/fkr.png" width="30"></li>
+                            </ul>
+
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+
 
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -198,7 +211,5 @@
         <script src="js/bootstrap/bootstrap.min.js"></script>
         <!-- Custome Js file -->
         <script language="JavaScript" type="text/javascript" src="js/javascript.js"></script>
-        <!-- Translate Js file -->
-        <script src="js/translate.js" type="text/javascript"></script>
     </body>
 </html>
