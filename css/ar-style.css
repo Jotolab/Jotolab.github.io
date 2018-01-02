@@ -21,8 +21,6 @@ body {
   padding: 40px; }
   .itemsList a {
     cursor: pointer; }
-  .itemsList .thumbnail:hover {
-    box-shadow: 1px 1px 20px; }
 
 .rightImg img {
   height: 414px; }
