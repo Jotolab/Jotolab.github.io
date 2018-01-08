@@ -38,6 +38,15 @@ $(document).ready(function(){
         }
     });
 
+    $(".removebtn").on('click', function(){
+        $('.removebtn').parent().parent().css("display","none");
+        if($("html").attr("lang") === "en"){
+            $('.itemDetails').html("<div class='col-md-12'><h4>The item is removed, There are no photos selected!</h4></div>");
+        } else {
+            $('.itemDetails').html("<div class='col-md-12'><h4>تم حذف المنتج، لا يوجد هناك صور مختارة!</h4></div>");
+        }
+        event.stopPropagation();
+    });
 
     console.log('Going Good');
 });    // ======= End Ready Function =======

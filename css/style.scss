@@ -95,6 +95,18 @@ body{
         line-height:25px;
     }
 }
+.orangebtn {
+    background-color:$orange;
+    color:$white;
+    border-radius: 20px;
+    font-weight: 300;
+}
+.orangebtn:hover{
+    background-color: transparent;
+    color: $orange;
+    font-weight: bold;
+    border: 1px solid $orange;
+}
 .footer{
     background-color: $orange;
     color: #fff;
@@ -119,12 +131,20 @@ body{
     }
 }
 .itemDetails{
-    border: 1px dotted #000;
+    border: 1px dotted $orange;
     background-color: #f3f2f2;
+    a {
+        cursor: pointer;
+        color: #777;
+    }
+    a:hover{
+        color: $orange;
+    }
+    i {
+        margin-top: 25px;
+    }
 }
-.button {
-    margin-top: 20px;
-}
+
 .image{
     margin-top: 20px;
 }
@@ -140,12 +160,24 @@ body{
 }
 .summary {
     h3{
-        margin-bottom: 30px;
+        margin-bottom: 5px;
         margin-top: 0px;
+    }
+    small{
+        display: block;
+        margin-bottom: 25px;
     }
     .info{
         border-#{$floatLeft}:1px dotted graytext;
         margin: 15px 0px;
+    }
+    .reqstar{
+        color: $orange;
+    }
+    p{
+        font-weight: 500;
+        font-size: 15px;  
+        padding-#{$floatRight}: 0px;
     }
 }
 //======== Classes to Extend ========

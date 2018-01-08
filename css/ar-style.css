@@ -8,7 +8,7 @@ body {
 #menu {
   margin-top: 15px; }
   #menu a {
-    font-weight: 500; }
+    font-weight: 600; }
   #menu a:hover {
     color: #e8650f; }
 
@@ -55,6 +55,18 @@ body {
   .new p {
     line-height: 25px; }
 
+.orangebtn {
+  background-color: #e8650f;
+  color: #F5F8FF;
+  border-radius: 20px;
+  font-weight: 300; }
+
+.orangebtn:hover {
+  background-color: transparent;
+  color: #e8650f;
+  font-weight: bold;
+  border: 1px solid #e8650f; }
+
 .footer {
   background-color: #e8650f;
   color: #fff;
@@ -73,8 +85,15 @@ body {
   margin: 0px 5px; }
 
 .itemDetails {
-  border: 1px dotted #000;
+  border: 1px dotted #e8650f;
   background-color: #f3f2f2; }
+  .itemDetails a {
+    cursor: pointer;
+    color: #777; }
+  .itemDetails a:hover {
+    color: #e8650f; }
+  .itemDetails i {
+    margin-top: 25px; }
 
 .button {
   margin-top: 20px; }
@@ -89,8 +108,11 @@ body {
   line-height: 25px; }
 
 .summary h3 {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   margin-top: 0px; }
+.summary small {
+  display: block;
+  margin-bottom: 25px; }
 .summary .info {
   border-right: 1px dotted graytext;
   margin: 15px 0px; }
@@ -98,5 +120,7 @@ body {
   float: right; }
 .summary input {
   float: left; }
+.summary .reqstar {
+  color: #e8650f; }
 
 /*# sourceMappingURL=ar-style.css.map */

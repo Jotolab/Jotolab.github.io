@@ -60,36 +60,36 @@
             </nav>
         </div><!-- /.navigation -->
 
-        <div class="container">
+        <div class="container itemDetails">
             <div class="row">
-                <div class="itemDetails col-md-12">
+                <div class="col-md-12">
                     <ul>
-                    <li class="col-md-1 image">
-                        <img src="images/c1.jpg" class="center-block img-responsive img-rounded">
-                    </li>
-                    <li class="col-md-2">
-                        <h3>إسم المنتج</h3>
-                        <p>المنتج الاول</p>
-                    </li>
-                    <li class="col-md-2">
-                        <h3>نوع المنتج</h3>
-                        <p>البوم صور</p>
-                    </li>
-                    <li class="col-md-2">
-                        <h3>حجم المنتج</h3>
-                        <p>١٤ * ٢١ سم</p>
-                    </li>
-                    <li class="col-md-2">
-                        <h3>العدد</h3>
-                        <p>١</p>
-                    </li>
-                    <li class="col-md-1">
-                        <h3>المجموع</h3>
-                        <p><b>٤٠ دينار</b></p>
-                    </li>
-                    <li class="col-md-2">
-                        <button type="button" class="center-block btn btn-danger btn-lg button" name="button">حذف</button>
-                    </li>
+                        <li class="col-md-1 image">
+                            <img src="images/c1.jpg" class="center-block img-responsive img-rounded">
+                        </li>
+                        <li class="col-md-2">
+                            <h3>إسم المنتج</h3>
+                            <p>المنتج الاول</p>
+                        </li>
+                        <li class="col-md-2">
+                            <h3>نوع المنتج</h3>
+                            <p>البوم صور</p>
+                        </li>
+                        <li class="col-md-2">
+                            <h3>حجم المنتج</h3>
+                            <p>١٤ * ٢١ سم</p>
+                        </li>
+                        <li class="col-md-2">
+                            <h3>العدد</h3>
+                            <p>١</p>
+                        </li>
+                        <li class="col-md-1">
+                            <h3>المجموع</h3>
+                            <p><b>٤٠ دينار</b></p>
+                        </li>
+                        <li class="col-md-2 text-center">
+                            <a class="removebtn"><i class="fa fa-trash-o fa-3x" aria-hidden="true"></i></a>
+                        </li>
                     </ul>
                 </div> <!--itemDetails -->
             </div>
@@ -102,80 +102,53 @@
                         <li class="col-md-5"> <h1>حطلك صورة ترحيب</h1> </li>
                         <li class="col-md-7 info">
                             <h3>من فضلك! قم بتعبئة المعلومات</h3>
+                            <small><span class="reqstar">*</span>حقول مطلوبة</small>
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="firstName" class="col-sm-2 control-label">First Name</label>
+                                    <label for="firstName" class="col-sm-2 control-label">الإسم الأول<span class="reqstar">*</span></label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="firstName" placeholder="Your First Name...">
+                                        <input type="text" class="form-control" id="firstName" placeholder="إسمك الأول..." required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+                                    <label for="lastName" class="col-sm-2 control-label">الإسم الاخير<span class="reqstar">*</span></label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="lastName" placeholder="Your Last Name...">
+                                        <input type="text" class="form-control" id="lastName" placeholder="إسمك الأخير..." required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="email" class="col-sm-2 control-label">Email</label>
+                                    <label for="email" class="col-sm-2 control-label">البريد الإلكتروني</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="email" placeholder="Your email">
+                                        <input type="email" class="form-control" id="email" placeholder="example@domain.com">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">Country</label>
-                                    <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option>Jordan</option>
-                                            <option>Soudi Arabia</option>
-                                            <option>United Arab Emarits</option>
-                                        </select>
-                                    </div>
-                                    <label class="col-sm-1 control-label">City</label>
-                                    <div class="col-sm-2">
-                                        <select class="form-control">
-                                            <option>Amman</option>
-                                            <option>Irbid</option>
-                                            <option>Zarqa</option>
-                                            <option>Karak</option>
-                                            <option>Jarash</option>
-                                            <option>Mafraq</option>
-                                            <option>Madaba</option>
-                                        </select>
-                                    </div>
-                                    <label for="address" class="col-sm-1 control-label">Address</label>
-                                    <div class="col-sm-4">
-                                        <input type="text" class="form-control" id="address" placeholder="Your Address Here...">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phoneNumber" class="col-sm-2 control-label">Phone Number</label>
+                                <div class="form-group">                                    
+
+                                    <label for="address" class="col-sm-2 control-label">العنوان<span class="reqstar">*</span></label>
                                     <div class="col-sm-10">
-                                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Your Phone Number...">
+                                        <input type="text" class="form-control" id="address" placeholder="عنوان التوصيل" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Comment" class="col-sm-2 control-label">Comment</label>
+                                    <label for="phoneNumber" class="col-sm-2 control-label">رقم الهاتف<span class="reqstar">*</span></label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control"></textarea>
+                                        <input type="tel" class="form-control" id="phoneNumber" placeholder="079xxxxxxxx" value="" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"> تذكرني
-                                            </label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox">أقبل <a>الاحكام و الشروط</a>
-                                            </label>
-                                        </div>
+                                    <label for="Comment" class="col-sm-2 control-label">ملاحظات</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" placeholder="اي ملاحظات أخرى..."></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="submit" class="btn btn-danger btn-lg">أطلب الآن</button>
+                                    <div class="col-sm-10">
+                                        <span>عند النقر على أطلب الآن، فأنت تقبل <a href="terms.html"> الشروط والاحكام.</a></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn orangebtn btn-lg">أطلب الآن</button>
                                     </div>
                                 </div>
                             </form>
@@ -227,11 +200,11 @@
                         </li>
                         <li class="col-md-3 socialButtons">
                             <p><b>إبقى على تواصل</b></p>
-                            <a href="https://www.facebook.com/jotolab/" target="_blank"><img src="images/fb.png" width="30"></a>
-                            <a href="#" target="_blank"><img src="images/insta.png" width="30"></a>
-                            <a href="#" target="_blank"><img src="images/go.png" width="30"></a><br>
-                            <a href="#" target="_blank"><img src="images/linkedin.png" width="30"></a>
-                            <a href="#" target="_blank"><img src="images/snap.png" width="30"></a>    
+                            <a href="https://www.facebook.com/jotolab/" target="_blank"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></a><br>
+                            <a href="#" target="_blank"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-snapchat-square fa-3x" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
