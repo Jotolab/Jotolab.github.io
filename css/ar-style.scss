@@ -1,6 +1,7 @@
 //======== Variables ==============
 $white: #F5F8FF;
-$fontColor: #454553;
+$fontColor: #777;
+$orange:#e8650f;
 $direction: rtl;
 $floatLeft: left;
 $floatRight: right;
@@ -24,6 +25,16 @@ body{
     border: 0px;
 }
 
+#menu {
+    margin-top:15px;
+    a{
+        font-weight: 500;
+    }
+    a:hover{
+        color:$orange;
+    }
+}
+
 .coverphoto {
     background-repeat:no-repeat;
     background-position:center;
@@ -38,13 +49,26 @@ body{
         margin:10px;
     }
 }
+
+.leftMenu{
+    img {
+        width: 20px;
+    }
+    .social{
+        padding-right:3px;
+        padding-left:3px;
+    }
+}
 .itemsList {
     padding: 40px;
     a{
         cursor: pointer;
     }
     .thumbnail:hover{
-        box-shadow: 1px 1px 20px;
+        box-shadow: 1px 1px 20px #e8650f;
+    }
+    .thumbnail .caption{
+        color:$fontColor;
     }
 }
 
@@ -73,9 +97,27 @@ body{
     }
 }
 .footer{
-    background-color: #a12414;
+    background-color: $orange;
     color: #fff;
     padding: 20px;
+    a{
+        color: $white;
+    }
+    img{
+        margin-top: 27px;
+    }
+    td{
+        padding-left:40px;
+        padding-bottom:10px; 
+    }
+    .socialButtons img{
+        margin: 7px 5px 7px 0px;
+    }
+}
+.socialButtons {
+    ul li{
+        margin: 0px 5px;
+    }
 }
 .itemDetails{
     border: 1px dotted #000;
