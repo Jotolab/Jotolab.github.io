@@ -1,9 +1,22 @@
 body {
-  color: #454553; }
+  color: #777; }
 
 .navbar-default {
   background-color: transparent;
   border: 0px; }
+
+#menu {
+  margin-top: 15px; }
+  #menu a {
+    font-weight: 500; }
+  #menu a:hover {
+    color: #e8650f; }
+
+.rightMenu img {
+  width: 20px; }
+.rightMenu .social {
+  padding-right: 3px;
+  padding-left: 3px; }
 
 .coverphoto {
   background-repeat: no-repeat;
@@ -22,7 +35,9 @@ body {
   .itemsList a {
     cursor: pointer; }
   .itemsList .thumbnail:hover {
-    box-shadow: 1px 1px 20px; }
+    box-shadow: 1px 1px 20px #e8650f; }
+  .itemsList .thumbnail .caption {
+    color: #777; }
 
 .rightImg img {
   height: 414px; }
@@ -35,15 +50,27 @@ body {
 .new {
   padding: 50px;
   background: linear-gradient(to bottom, #e4e2df, #e4e2df);
-  color: #454553;
+  color: #777;
   font-size: 17px; }
   .new p {
     line-height: 25px; }
 
 .footer {
-  background-color: #a12414;
+  background-color: #e8650f;
   color: #fff;
   padding: 20px; }
+  .footer a {
+    color: #F5F8FF; }
+  .footer img {
+    margin-top: 27px; }
+  .footer td {
+    padding-right: 40px;
+    padding-bottom: 10px; }
+  .footer .socialButtons img {
+    margin: 7px 5px 7px 0px; }
+
+.socialButtons ul li {
+  margin: 0px 5px; }
 
 .itemDetails {
   border: 1px dotted #000;
