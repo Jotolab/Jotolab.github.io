@@ -1,6 +1,9 @@
 body {
   color: #777; }
 
+ul {
+  padding: 0px; }
+
 .navbar-default {
   background-color: transparent;
   border: 0px; }
@@ -30,17 +33,14 @@ body {
   .coverphoto img {
     margin: 10px; }
 
-.itemsList {
-  padding: 40px; }
-  .itemsList a {
-    cursor: pointer; }
-  .itemsList .thumbnail:hover {
-    box-shadow: 1px 1px 20px #e8650f; }
-  .itemsList .thumbnail .caption {
-    color: #777; }
-
-.rightImg img {
-  height: 414px; }
+.itemsList a {
+  cursor: pointer; }
+.itemsList .thumbnail:hover {
+  box-shadow: 1px 1px 20px #e8650f; }
+.itemsList .thumbnail .caption {
+  color: #777; }
+.itemsList span {
+  float: right; }
 
 .howTo ul, .itemsList ul, .bestApp ul, .new ul, .footer ul, .itemIntro ul, .fullDescription ul, .summary ul, .itemDetails ul {
   list-style: none; }
@@ -48,12 +48,15 @@ body {
   float: left; }
 
 .new {
-  padding: 50px;
+  padding: 25px;
   background: linear-gradient(to bottom, #e4e2df, #e4e2df);
   color: #777;
   font-size: 17px; }
   .new p {
     line-height: 25px; }
+  .new img {
+    width: 100%;
+    height: 300px; }
 
 .orangebtn {
   background-color: #e8650f;
@@ -74,7 +77,8 @@ body {
   .footer a {
     color: #F5F8FF; }
   .footer img {
-    margin-top: 27px; }
+    padding: 35px 0px;
+    width: 100%; }
   .footer td {
     padding-right: 40px;
     padding-bottom: 10px; }
