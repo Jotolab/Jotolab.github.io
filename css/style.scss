@@ -72,7 +72,7 @@ ul{
         color:$fontColor;
     }
     span{
-        float: $floatRight;
+        @extend .free;
     }
 }
 
@@ -187,3 +187,9 @@ ul{
 }
 //======== Classes to Extend ========
 
+.free {
+    color: red;
+}
+.rightText {
+    float: $floatRight;
+}

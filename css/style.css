@@ -39,8 +39,6 @@ ul {
   box-shadow: 1px 1px 20px #e8650f; }
 .itemsList .thumbnail .caption {
   color: #777; }
-.itemsList span {
-  float: right; }
 
 .howTo ul, .itemsList ul, .bestApp ul, .new ul, .footer ul, .itemIntro ul, .fullDescription ul, .summary ul, .itemDetails ul {
   list-style: none; }
@@ -123,5 +121,11 @@ ul {
   font-weight: 500;
   font-size: 15px;
   padding-right: 0px; }
+
+.free, .itemsList span {
+  color: red; }
+
+.rightText {
+  float: right; }
 
 /*# sourceMappingURL=style.css.map */
