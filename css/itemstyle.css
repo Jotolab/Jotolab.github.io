@@ -52,12 +52,3 @@
 	-o-transition: width 4.25s linear;
 	transition: width 4.25s linear;
 }
-
-.itemdetails{
-  padding: 50px;
-  background-color:#F5F8FF;
-}
-.fullDescription{
-    padding: 50px;
-    font-size: 17px;
-}

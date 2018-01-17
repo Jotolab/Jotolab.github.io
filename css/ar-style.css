@@ -8,6 +8,9 @@ ul {
   background-color: transparent;
   border: 0px; }
 
+.navbar-right {
+  margin-right: 0px; }
+
 #menu {
   margin-top: 15px; }
   #menu a {
@@ -39,8 +42,6 @@ ul {
   box-shadow: 1px 1px 20px #e8650f; }
 .itemsList .thumbnail .caption {
   color: #777; }
-.itemsList span {
-  float: left; }
 
 .howTo ul, .itemsList ul, .bestApp ul, .new ul, .footer ul, .itemIntro ul, .fullDescription ul, .summary ul, .itemDetails ul {
   list-style: none; }
@@ -48,7 +49,7 @@ ul {
   float: right; }
 
 .new {
-  padding: 20px;
+  padding: 25px;
   background: linear-gradient(to bottom, #e4e2df, #e4e2df);
   color: #777;
   font-size: 17px; }
@@ -99,8 +100,15 @@ ul {
   .itemDetails i {
     margin-top: 25px; }
 
-.button {
-  margin-top: 20px; }
+.banner {
+  background-color: #e8650f; }
+  .banner p {
+    color: #F5F8FF; }
+
+.itemdetails {
+  padding: 50px;
+  background-color: #F5F8FF;
+  margin-top: 10px; }
 
 .image {
   margin-top: 20px; }
@@ -108,8 +116,11 @@ ul {
 .bestApp .stars {
   padding: 15px 0px; }
 
-.fullDescription p {
-  line-height: 25px; }
+.fullDescription {
+  padding: 25px;
+  font-size: 17px; }
+  .fullDescription p {
+    line-height: 25px; }
 
 .summary h3 {
   margin-bottom: 5px;
@@ -126,5 +137,59 @@ ul {
   float: left; }
 .summary .reqstar {
   color: #e8650f; }
+
+.sizeSelect a {
+  color: #e8650f; }
+.sizeSelect .bigSize {
+  float: right; }
+  .sizeSelect .bigSize span {
+    float: left; }
+  .sizeSelect .bigSize div {
+    text-align: right; }
+.sizeSelect .mediumSize {
+  float: right;
+  padding-top: 56px; }
+  .sizeSelect .mediumSize span {
+    float: left; }
+  .sizeSelect .mediumSize div {
+    text-align: right; }
+.sizeSelect .smallSize {
+  float: right;
+  padding-top: 112px; }
+  .sizeSelect .smallSize span {
+    float: left; }
+  .sizeSelect .smallSize div {
+    text-align: right; }
+.sizeSelect .bigIcon {
+  font-size: 16em; }
+.sizeSelect .mediumIcon {
+  font-size: 12em; }
+.sizeSelect .smallIcon {
+  font-size: 8em; }
+
+@media (max-width: 767px) {
+  .sizeSelect .mediumSize {
+    padding-top: 0px; }
+  .sizeSelect .smallSize {
+    padding-top: 0px; }
+
+  .bigSize {
+    border-bottom: 1px solid #e8650f; }
+
+  .mediumSize {
+    border-bottom: 1px solid #e8650f; } }
+@media (min-width: 767px) {
+  .mediumSize {
+    border-right: 1px solid #e8650f;
+    border-left: 1px solid #e8650f; } }
+.free, .itemsList span {
+  color: red; }
+
+.border {
+  border-right: 1px solid #e8650f;
+  border-left: 1px solid #e8650f; }
+
+.rightText {
+  float: left; }
 
 /*# sourceMappingURL=ar-style.css.map */
