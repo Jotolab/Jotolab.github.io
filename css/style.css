@@ -1,5 +1,6 @@
 body {
-  color: #777; }
+  color: #777;
+  font-family: HelveticaNeue-Light, Arial; }
 
 ul {
   padding: 0px; }
@@ -60,7 +61,8 @@ ul {
   background-color: #e8650f;
   color: #F5F8FF;
   border-radius: 20px;
-  font-weight: 300; }
+  font-weight: 300;
+  margin-top: 20px; }
 
 .orangebtn:hover {
   background-color: transparent;
@@ -99,8 +101,15 @@ ul {
 
 .banner {
   background-color: #e8650f; }
-  .banner p {
-    color: #F5F8FF; }
+  .banner h3 {
+    color: #F5F8FF;
+    padding: 15px 0px;
+    margin-top: 0px; }
+
+.itemIntro span {
+  float: right; }
+.itemIntro h1 {
+  margin-top: 0px; }
 
 .itemdetails {
   padding: 50px;
@@ -174,7 +183,10 @@ ul {
 @media (min-width: 767px) {
   .mediumSize {
     border-right: 1px solid #e8650f;
-    border-left: 1px solid #e8650f; } }
+    border-left: 1px solid #e8650f; }
+
+  .carousell {
+    height: 300px; } }
 .free, .itemsList span {
   color: red; }
 
