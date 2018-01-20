@@ -179,13 +179,16 @@ ul {
     border-bottom: 1px solid #e8650f; }
 
   .mediumSize {
-    border-bottom: 1px solid #e8650f; } }
+    border-bottom: 1px solid #e8650f; }
+
+  .itemIntro .priceBlock {
+    margin-top: 15px; } }
 @media (min-width: 767px) {
   .mediumSize {
     border-right: 1px solid #e8650f;
     border-left: 1px solid #e8650f; }
 
-  .carousell {
+  .slider {
     height: 300px; } }
 .free, .itemsList span {
   color: red; }

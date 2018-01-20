@@ -277,14 +277,18 @@ ul{
     .mediumSize{
         border-bottom:1px solid $orange;
     }
+    .itemIntro{
+        .priceBlock{
+            margin-top: 15px;
+        }
+    }
 }
-@media (max-width: $media-tablet){}
 @media (min-width:$media-laptop){
      .mediumSize {
         border-right:1px solid $orange;
         border-left:1px solid $orange;
     }
-    .carousell{
+    .slider{
         height: 300px;
     }
 }

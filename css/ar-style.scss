@@ -2,6 +2,7 @@
 $white: #F5F8FF;
 $fontColor: #777;
 $orange:#e8650f;
+$jotolabFont: HelveticaNeue-Light, Arial;
 $descriptionPadding:25px;
 $media-mobile:767px;
 $media-tablet:990px;
@@ -21,6 +22,7 @@ $image: url('images/blockbg.png');
 //======== Styling ================
 body{
     color: $fontColor;
+    font-family: $jotolabFont;
 }
 ul{
     padding: 0px;
@@ -111,6 +113,7 @@ ul{
     color:$white;
     border-radius: 20px;
     font-weight: 300;
+    margin-top: 20px;
 }
 .orangebtn:hover{
     background-color: transparent;
@@ -159,8 +162,18 @@ ul{
 
 .banner{
     background-color: $orange;
-    p{
+    h3{
         color: $white;
+        padding: 15px 0px;
+        margin-top: 0px;
+    }
+}
+.itemIntro {
+    span{
+        float: $floatRight;
+    }
+    h1{
+        margin-top: 0px;
     }
 }
 .itemdetails{
@@ -270,12 +283,19 @@ ul{
     .mediumSize{
         border-bottom:1px solid $orange;
     }
+    .itemIntro{
+        .priceBlock{
+            margin-top: 15px;
+        }
+    }
 }
-@media (max-width: $media-tablet){}
 @media (min-width:$media-laptop){
-     .mediumSize {
+    .mediumSize {
         border-right:1px solid $orange;
         border-left:1px solid $orange;
+    }
+    .slider{
+        height: 300px;
     }
 }
 //======== Classes to Extend ========
