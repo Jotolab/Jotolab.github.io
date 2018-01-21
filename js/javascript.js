@@ -39,11 +39,16 @@ $(document).ready(function(){
     });
 
     $(".removebtn").on('click', function(){
+        var url = window.location.href;
         $('.removebtn').parent().parent().css("display","none");
         if($("html").attr("lang") === "en"){
+            url = url.split('&')[0];
+            history.pushState(null, null, url.replace(/&view=.*(&?)/, '$1'));
             $('.itemDetails').html("<div class='col-md-12'><h4>The item is removed, There are no photos selected!</h4></div>");
         } else {
             $('.itemDetails').html("<div class='col-md-12'><h4>تم حذف المنتج، لا يوجد هناك صور مختارة!</h4></div>");
+            url = url.split('&')[0];
+            history.pushState(null, null, url.replace(/&view=.*(&?)/, '$1'));
         }
         event.stopPropagation();
     });
