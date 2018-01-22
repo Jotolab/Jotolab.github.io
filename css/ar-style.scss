@@ -208,7 +208,7 @@ ul{
         margin-bottom: 25px;
     }
     .info{
-        border-#{$floatLeft}:1px dotted graytext;
+       // border-#{$floatLeft}:1px dotted graytext;
         margin: 15px 0px;
     }
     label{
@@ -219,6 +219,9 @@ ul{
     }
     .reqstar{
         color: $orange;
+    }
+    img{
+        margin-top: 100px;
     }
 }
 

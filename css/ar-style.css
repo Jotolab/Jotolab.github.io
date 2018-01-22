@@ -138,7 +138,6 @@ ul {
   display: block;
   margin-bottom: 25px; }
 .summary .info {
-  border-right: 1px dotted graytext;
   margin: 15px 0px; }
 .summary label {
   float: right; }
@@ -146,6 +145,8 @@ ul {
   float: left; }
 .summary .reqstar {
   color: #e8650f; }
+.summary img {
+  margin-top: 100px; }
 
 .sizeSelect a {
   color: #e8650f; }

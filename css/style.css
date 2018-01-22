@@ -135,7 +135,6 @@ ul {
   display: block;
   margin-bottom: 25px; }
 .summary .info {
-  border-left: 1px dotted graytext;
   margin: 15px 0px; }
 .summary .reqstar {
   color: #e8650f; }
@@ -143,6 +142,8 @@ ul {
   font-weight: 500;
   font-size: 15px;
   padding-right: 0px; }
+.summary img {
+  margin-top: 100px; }
 
 .sizeSelect a {
   color: #e8650f; }
