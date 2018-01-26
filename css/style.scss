@@ -159,9 +159,9 @@ ul{
 
 .banner{
     background-color: $orange;
-    h3{
+    h4{
         color: $white;
-        padding: 15px 0px;
+        padding: 10px 0px;
         margin-top: 0px;
     }
 }
@@ -230,36 +230,43 @@ ul{
         span{
             float: $floatRight;
         }
-        div{
-            text-align: $floatLeft;
+        h3 {
+            margin-top: 0px;
         }
+        h4{
+            margin-bottom: 0px;
+        }
+/*        div{
+            text-align: $floatLeft;
+        }*/
     }
     .mediumSize {
-        padding-top: 56px;
         span{
             float: $floatRight;
         }
-        div{
-            text-align: $floatLeft;
+        h3 {
+            margin-top: 0px;
         }
+        h4{
+            margin-bottom: 0px;
+        }
+/*        div{
+            text-align: $floatLeft;
+        }*/
     }
     .smallSize{
-        padding-top: 112px;
         span{
             float: $floatRight;
         }
-        div{
-            text-align: $floatLeft;
+        h3 {
+            margin-top: 0px;
         }
-    }
-    .bigIcon{
-        font-size: 16em;
-    }
-    .mediumIcon {
-        font-size: 12em;
-    }
-    .smallIcon{
-        font-size: 8em;
+        h4{
+            margin-bottom: 0px;
+        }
+/*        div{
+            text-align: $floatLeft;
+        }*/
     }
 }
 

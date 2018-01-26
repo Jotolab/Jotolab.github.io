@@ -101,9 +101,9 @@ ul {
 
 .banner {
   background-color: #e8650f; }
-  .banner h3 {
+  .banner h4 {
     color: #F5F8FF;
-    padding: 15px 0px;
+    padding: 10px 0px;
     margin-top: 0px; }
 
 .itemIntro span {
@@ -147,28 +147,36 @@ ul {
 
 .sizeSelect a {
   color: #e8650f; }
-.sizeSelect .bigSize span {
-  float: right; }
-.sizeSelect .bigSize div {
-  text-align: left; }
+.sizeSelect .bigSize {
+  /*        div{
+              text-align: $floatLeft;
+          }*/ }
+  .sizeSelect .bigSize span {
+    float: right; }
+  .sizeSelect .bigSize h3 {
+    margin-top: 0px; }
+  .sizeSelect .bigSize h4 {
+    margin-bottom: 0px; }
 .sizeSelect .mediumSize {
-  padding-top: 56px; }
+  /*        div{
+              text-align: $floatLeft;
+          }*/ }
   .sizeSelect .mediumSize span {
     float: right; }
-  .sizeSelect .mediumSize div {
-    text-align: left; }
+  .sizeSelect .mediumSize h3 {
+    margin-top: 0px; }
+  .sizeSelect .mediumSize h4 {
+    margin-bottom: 0px; }
 .sizeSelect .smallSize {
-  padding-top: 112px; }
+  /*        div{
+              text-align: $floatLeft;
+          }*/ }
   .sizeSelect .smallSize span {
     float: right; }
-  .sizeSelect .smallSize div {
-    text-align: left; }
-.sizeSelect .bigIcon {
-  font-size: 16em; }
-.sizeSelect .mediumIcon {
-  font-size: 12em; }
-.sizeSelect .smallIcon {
-  font-size: 8em; }
+  .sizeSelect .smallSize h3 {
+    margin-top: 0px; }
+  .sizeSelect .smallSize h4 {
+    margin-bottom: 0px; }
 
 @media (max-width: 767px) {
   .sizeSelect .mediumSize {
