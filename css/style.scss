@@ -236,6 +236,9 @@ ul{
         h4{
             margin-bottom: 0px;
         }
+        img{
+            width: 100%;
+        }
 /*        div{
             text-align: $floatLeft;
         }*/
@@ -249,6 +252,9 @@ ul{
         }
         h4{
             margin-bottom: 0px;
+        }
+        img{
+            width: 100%;
         }
 /*        div{
             text-align: $floatLeft;
@@ -264,11 +270,23 @@ ul{
         h4{
             margin-bottom: 0px;
         }
+        img{
+            width: 100%;
+        }
 /*        div{
             text-align: $floatLeft;
         }*/
     }
 }
+.slider{
+        height: 300px;
+        .carousel-inner {
+           height: 300px; 
+        }
+        .item img {
+           height: 300px; 
+        }
+    }
 
 
 //======== @media Screens ===========
@@ -292,14 +310,20 @@ ul{
             margin-top: 15px;
         }
     }
+    .slider{
+        height: 200px;
+        .carousel-inner {
+           height: 200px; 
+        }
+        .item img {
+           height: 200px; 
+        }
+    }
 }
 @media (min-width:$media-laptop){
     .mediumSize {
         border-right:1px solid $orange;
         border-left:1px solid $orange;
-    }
-    .slider{
-        height: 300px;
     }
 }
 //======== Classes to Extend ========
