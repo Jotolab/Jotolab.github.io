@@ -38,11 +38,6 @@ $('#submit').on('click', function (e) {
                     uploadImageAsPromise(imageFile);
                 }
                 alert('Your Images have been submitted');
-                    if ($("html").attr("lang") === "en") {
-        window.location.assign("../en-contact.html");
-    } else {
-        window.location.assign("../ar-contact.html");
-    }
             } else {
                 alert('Sory! You select invalid file OR there is a file are not image!');
             }
@@ -161,10 +156,10 @@ function uploadImageAsPromise(imageFile) {
 
 $('[data-provide="fileupload"]').fileUpload();
 
-//$("#submit").on('click', function () {
-//    if ($("html").attr("lang") === "en") {
-//        window.location.assign("../en-contact.html");
-//    } else {
-//        window.location.assign("../ar-contact.html");
-//    }
-//});
+$("#nextpage").on('click', function () {
+    if ($("html").attr("lang") === "en") {
+        window.location.assign("../en-contact.html");
+    } else {
+        window.location.assign("../ar-contact.html");
+    }
+});
