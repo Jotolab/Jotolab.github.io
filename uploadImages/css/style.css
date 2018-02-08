@@ -1,0 +1,64 @@
+/*-------------------------
+    Simple reset
+--------------------------*/
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+/*-------------------------
+    General Styles
+--------------------------*/
+
+body {
+  padding: 50px;
+}
+
+.file-upload {
+  margin: 20px 0;
+}
+.file-upload input[type="file"] {
+  display: none;
+}
+button + .file-upload-list {
+  margin-top: 10px;
+}
+.file-upload-list {
+  margin: -10px -5px;
+}
+.file-upload-item {
+  margin: 10px 5px;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: top;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+.file-upload-item:hover {
+  border-color: #ff6600;
+  outline: none;
+}
+.file-upload-item > strong {
+  position: relative;
+  margin-bottom: 10px;
+  display: block;
+  color: #555;
+  font-weight: normal;
+  font-size: 84%;
+}
+.file-upload-item > strong:last-child {
+  margin-bottom: 0;
+}
+.file-upload-item > img {
+  max-width: 80px;
+  max-height: 40px;
+  object-fit: cover;
+  object-size: 50%;
+}

@@ -2,165 +2,45 @@
 <html lang="en">
 
     <head>
-        <meta charset="utf-8"/>
-        <title>Test Upload</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="../images/logo-large-square.jpeg" type="image/gif" sizes="16x16">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Google web fonts -->
-        <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+        <title>Print your amazing photos</title>
 
         <!-- The main CSS file -->
-        <link href="assets/css/style.css" rel="stylesheet" />
-        
-            <style type="text/css" media="screen">
-    	body{
-    		display: flex;
-    		min-height: 100vh;
-    		width: 100%;
-    		padding: 0;
-    		margin: 0;
-    		align-items: center;
-    		justify-content: center;
-    		flex-direction: column;
-    	}
-
-    	#uploader {
-    		-webkit-appearance: none;
-    		appearance: none;
-    		width: 50%;
-    		margin-bottom: 10px;
-    	}
-    </style>
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </head>
-  
+
     <body>
-        
-        
-  		<progress value="0" max="100" id="uploader" style="visibility: hidden;">0%</progress> 
-  		<input type="file" value="upload" id="fileButton" multiple="">
-                
-                <div class="submitBtn">
-            <form action="../en-contact.html" method="GET">
-                <input type="hidden" name="pn" value="10 Photos / 2 FREE">
-                <input type="hidden" name="in" value="Big Size">
-                <input type="hidden" name="is" value="21 x 29.7cm">
-                <input type="hidden" name="qty" value="1">
-                <input type="hidden" name="total" value="50 JOD">
-                <button>Submit</button>
-            </form>
+
+        <h1>Upload Your Images</h1>
+        <p>This function works in IE10 or higher browser.</p>
+
+        <div class="file-upload" data-provide="fileupload">
+            <progress value="0" max="100" id="uploader" style="">0%</progress> 
+            <input type="file" name="imagefiles[]" accept="image/*" value="upload" id="fileButton" multiple>
+            <button type="button" class="btn btn-danger">Attach image</button>
+            <input type="Submit" name="Submit" id="submit">
         </div>
 
-
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBasVDeO5TNFnFX-wB0MBr_Fh_vRCKYbOM",
-    authDomain: "jotolabproject.firebaseapp.com",
-    databaseURL: "https://jotolabproject.firebaseio.com",
-    projectId: "jotolabproject",
-    storageBucket: "jotolabproject.appspot.com",
-    messagingSenderId: "473126506010"
-  };
-  firebase.initializeApp(config);
-
-		  var uploader = document.getElementById('uploader');
-		  var fileButton = document.getElementById('fileButton');
-		  //Listen for file selection
-			fileButton.addEventListener('change', function(e){ 
-			    //Get files
-			    
-			    for (var i = 0; i < e.target.files.length; i++) {			    	
-			        var imageFile = e.target.files[i];  
-			        
-			        uploadImageAsPromise(imageFile);
-			        if (i == '3'){
-			        	alert('You cannot upload more than 3 pictures');
-			        	stop();
-			        }        
-			        
-			    }
-
-			});
-
-			//Handle waiting to upload each file using promise
-			function uploadImageAsPromise (imageFile) {
-			    return new Promise(function (resolve, reject) {
-			        var storageRef = firebase.storage().ref("Jotolabphotos/"+imageFile.name);
-
-			        //Upload file
-			        var task = storageRef.put(imageFile);
-
-			        //Update progress bar
-			        task.on('state_changed',
-			            function progress(snapshot){			            	
-			                var percentage = snapshot.bytesTransferred / snapshot.totalBytes * 100;			                
-			                uploader.value = percentage;
-			                $('body').append("<progress value='" + percentage + "' max='100' id='uploader' style='-webkit-appearance: none;appearance: none;width: 50%;margin-bottom: 10px;'>0%</progress>");	
-	                
-			                if($('progress').attr('value') !== '100'){
-					    	$('progress').css('display','none');
-			    }
-			            },
-			            function error(err){
-
-			            },
-			            function complete(){
-			                var downloadURL = task.snapshot.downloadURL;
-			            }			             
-			        );			        
-			    });
-
-
-			}
-		</script>
-		
-
- <!--       <form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
-            <div id="drop">
-                Drop Here
-
-                <a>Browse</a>
-                <input type="file" name="upl" multiple />
-            </div>
-
-            <ul>
-                 The file uploads will be shown here 
-            </ul>
-
-        </form>
-        <div class="submitBtn">
-            <form action="../en-contact.html" method="GET">
-                <input type="hidden" name="pn" value="10 Photos / 2 FREE">
-                <input type="hidden" name="in" value="Big Size">
-                <input type="hidden" name="is" value="21 x 29.7cm">
-                <input type="hidden" name="qty" value="1">
-                <input type="hidden" name="total" value="50 JOD">
-                <button>Submit</button>
-            </form>
-        </div>
-
-        <footer>
-            <h2><a href="http://tutorialzine.com/2013/05/mini-ajax-file-upload-form/"><i>Tutorial:</i> Mini Ajax File Upload Form</a></h2>
-            <div id="tzine-actions">
-                <a id="tzine-download" href="http://tutorialzine.com/2013/05/mini-ajax-file-upload-form/" title="Download This Example!">Download</a>
-            </div>
-        </footer>-->
-
-        <!-- JavaScript Includes -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="assets/js/jquery.knob.js"></script>
-
-        <!-- jQuery File Upload Dependencies -->
-        <script src="assets/js/jquery.ui.widget.js"></script>
-        <script src="assets/js/jquery.iframe-transport.js"></script>
-        <script src="assets/js/jquery.fileupload.js"></script>
-
-        <!-- Our main JS file -->
-        <script src="assets/js/script.js"></script>
-
-
-        <!-- Only used for the demos. Please ignore and remove. -->
-        <script src="http://cdn.tutorialzine.com/misc/enhance/v1.js" async></script>
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+        <script src="js/script.js"></script>
+        
+        <!--        <div class="submit">
+                    <form action="../en-contact.html" method="GET">
+                        <input type="hidden" name="pn" value="10 Photos / 2 FREE">
+                        <input type="hidden" name="in" value="Big Size">
+                        <input type="hidden" name="is" value="21 x 29.7cm">
+                        <input type="hidden" name="qty" value="1">
+                        <input type="hidden" name="total" value="50 JOD">
+                        <button class="btn btn-default btn-lg orangebtn">Submit</button>
+                    </form>
+                </div>-->
 
     </body>
 </html>
