@@ -7,32 +7,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="../images/logo-large-square.jpeg" type="image/gif" sizes="16x16">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
         <title>Print your amazing photos</title>
 
         <!-- The main CSS file -->
         <link href="css/style.css" rel="stylesheet" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </head>
 
     <body>
+        <style>
+            h3{
+                color: #dedede;
+            }
+            #uploader{
+                width: 100%;
+            }
+            #doneBtn{
+                display: none;
+                width: 100%;
+            }
+            #submit{
+               
+            }
+            .uploadBtn {
+                border-radius: 0px;
+                margin-bottom: 10px;
+            }
+            .file-upload{
+                border: 2px dashed #9d9d9d;
+                padding: 10px;
+            }
+            .doneBtn{
+                width: 100%;
+            }
+        </style>
+        <progress value="0" max="100" id="uploader" style="">0%</progress>
+        <div class="container-fluid">
+            <div class="col-sm-12 file-upload text-center" data-provide="fileupload">
+                <h3>Upload Your Images</h3>
+                <input type="file" name="imagefiles[]" accept="image/*" value="upload" id="fileButton" multiple>
+                <button type="button" class="btn btn-danger btn-lg uploadBtn">Browse</button>
+                <button class="btn btn-success btn-lg uploadBtn" name="Submit" id="submit" disabled>Submit</button>                
+            </div>
+            <button class="btn btn-success btn-lg uploadBtn" name="Submit" id="doneBtn">Done</button> 
 
-        <h1>Upload Your Images</h1>
-        <p>This function works in IE10 or higher browser.</p>
-
-        <div class="file-upload" data-provide="fileupload">
-            <progress value="0" max="100" id="uploader" style="">0%</progress> 
-            <input type="file" name="imagefiles[]" accept="image/*" value="upload" id="fileButton" multiple>
-            <button type="button" class="btn btn-danger">Attach image</button>
-            <input type="Submit" name="Submit" id="submit">
         </div>
-        
-        <button id="nextpage">Next Page</button>
 
         <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
         <script src="js/script.js"></script>
-        
+
         <!--        <div class="submit">
                     <form action="../en-contact.html" method="GET">
                         <input type="hidden" name="pn" value="10 Photos / 2 FREE">

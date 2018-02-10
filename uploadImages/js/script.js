@@ -31,7 +31,7 @@ $('#submit').on('click', function (e) {
                 //Get files
                 for (var i = 0; i < fileButton.files.length; i++) {
                     var imageFile = fileButton.files[i];
-                    if (i >= '3') {
+                    if (i >= '10') {
                         alert('You cannot upload more than 3 pictures');
                         break;
                     }
@@ -59,16 +59,16 @@ function uploadImageAsPromise(imageFile) {
                     var percentage = snapshot.bytesTransferred / snapshot.totalBytes * 100;
                     uploader.value = percentage;
 
-                    $('body').append("<progress value='" + percentage + "' max='100' id='uploader' style='-webkit-appearance: none;appearance: none;width: 50%;margin-bottom: 10px;'></progress><div style='color:#000;'>" + imageFile.name + imageFile.size + "</div>");
-                    if ($('progress').attr('value') !== '100') {
-                        $('progress').css('display', 'none');
+//                    $('body').append("<progress value='" + percentage + "' max='100' id='uploader' style='-webkit-appearance: none;appearance: none;width: 50%;margin-bottom: 10px;'></progress><div style='color:#000;'>" + imageFile.name + imageFile.size + "</div>");
+                    if ($('progress').attr('value') === '100') {
+                        $('#doneBtn').show("slow");                        
                     }
                 },
                 function error(err) {
 
                 },
                 function complete() {
-                    var downloadURL = task.snapshot.downloadURL;
+                    var downloadURL = task.snapshot.downloadURL;                   
                 }
         );
     });
@@ -141,6 +141,7 @@ function uploadImageAsPromise(imageFile) {
 
     function changeInput() {
         addItem.call(this);
+        $('#submit').removeAttr("disabled");
     }
 
     $.fn.extend({
@@ -151,11 +152,12 @@ function uploadImageAsPromise(imageFile) {
                     .on('change', 'input', changeInput);
         }
     });
+    
 
 })(jQuery);
 
 $('[data-provide="fileupload"]').fileUpload();
-
+ 
 $("#nextpage").on('click', function () {
     if ($("html").attr("lang") === "en") {
         window.location.assign("../en-contact.html");
