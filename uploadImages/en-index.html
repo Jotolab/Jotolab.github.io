@@ -17,41 +17,24 @@
     </head>
 
     <body>
-        <style>
-            h3{
-                color: #dedede;
-            }
-            #uploader{
-                width: 100%;
-            }
-            #doneBtn{
-                display: none;
-                width: 100%;
-            }
-            #submit{
-               
-            }
-            .uploadBtn {
-                border-radius: 0px;
-                margin-bottom: 10px;
-            }
-            .file-upload{
-                border: 2px dashed #9d9d9d;
-                padding: 10px;
-            }
-            .doneBtn{
-                width: 100%;
-            }
-        </style>
+        <p class="loading lead">Loading...</p>
         <progress value="0" max="100" id="uploader" style="">0%</progress>
         <div class="container-fluid">
             <div class="col-sm-12 file-upload text-center" data-provide="fileupload">
                 <h3>Upload Your Images</h3>
                 <input type="file" name="imagefiles[]" accept="image/*" value="upload" id="fileButton" multiple>
-                <button type="button" class="btn btn-danger btn-lg uploadBtn">Browse</button>
+                <button type="button" class="btn btn-lg uploadBtn orangebtn">Browse</button>
                 <button class="btn btn-success btn-lg uploadBtn" name="Submit" id="submit" disabled>Submit</button>                
             </div>
-            <button class="btn btn-success btn-lg uploadBtn" name="Submit" id="doneBtn">Done</button> 
+            <form action="../en-contact.html">
+                <input type="hidden" name="pn" value="10 Photos / 2 FREE">
+                <input type="hidden" name="in" value="Small Size">
+                <input type="hidden" name="is" value="10 x 15cm">
+                <input type="hidden" name="qty" value="1">
+                <input type="hidden" name="total" value="10 JOD">
+                <button class="btn btn-success btn-lg uploadBtn" name="Submit" id="doneBtn">Done</button> 
+            </form>
+            
 
         </div>
 

@@ -14,51 +14,87 @@
 --------------------------*/
 
 body {
-  padding: 50px;
+    padding: 50px;
+    background-color: #fff;
 }
 
 .file-upload {
-  margin: 20px 0;
+    margin: 20px 0;
+    background-color: #F5F8FF;
 }
 .file-upload input[type="file"] {
-  display: none;
+    display: none;
 }
 button + .file-upload-list {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 .file-upload-list {
-  margin: -10px -5px;
+    margin: -10px -5px;
 }
 .file-upload-item {
-  margin: 10px 5px;
-  padding: 10px;
-  position: relative;
-  display: inline-block;
-  border-radius: 4px;
-  text-align: center;
-  vertical-align: top;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  cursor: pointer;
+    margin: 10px 5px;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: top;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    cursor: pointer;
 }
 .file-upload-item:hover {
-  border-color: #ff6600;
-  outline: none;
+    border-color: #ff6600;
+    outline: none;
 }
 .file-upload-item > strong {
-  position: relative;
-  margin-bottom: 10px;
-  display: block;
-  color: #555;
-  font-weight: normal;
-  font-size: 84%;
+    position: relative;
+    margin-bottom: 10px;
+    display: block;
+    color: #555;
+    font-weight: normal;
+    font-size: 84%;
 }
 .file-upload-item > strong:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 .file-upload-item > img {
-  max-width: 80px;
-  max-height: 40px;
-  object-fit: cover;
-  object-size: 50%;
+    max-width: 80px;
+    max-height: 40px;
+    object-fit: cover;
+    object-size: 50%;
 } 
+h3{
+    color: #cac5c5;
+}
+.loading{
+    display: none;
+}
+#uploader{
+    width: 100%;
+}
+#doneBtn{
+    display: none;
+    width: 100%;
+}
+.uploadBtn {
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+.file-upload{
+    border: 2px dashed #9d9d9d;
+    padding: 10px;
+}
+.doneBtn{
+    width: 100%;
+}
+.orangebtn, .orangebtn:focus{
+    background-color: #e8650f;
+    color: #fff;
+    
+}
+.orangebtn:hover{
+    background-color: #fff;
+    color: #e8650f;
+    border: 1px solid #e8650f;
+}

@@ -13,8 +13,8 @@ var fileButton = document.getElementById('fileButton');
 
 //Listen for file selection
 $('#submit').on('click', function (e) {
-    if (fileButton.files.length == 0) {
-        alert("no files selected");
+    if (fileButton.files.length > 12 || fileButton.files.length < 10) {
+        alert("Upload Only 10 Photos! Dont forget 2 photos free");
     } else {
         //check file type 
         //this is from http://webdesigncolors.navayan.com/jquery-validation-for-file-type-extension/
@@ -31,13 +31,12 @@ $('#submit').on('click', function (e) {
                 //Get files
                 for (var i = 0; i < fileButton.files.length; i++) {
                     var imageFile = fileButton.files[i];
-                    if (i >= '10') {
-                        alert('You cannot upload more than 3 pictures');
-                        break;
+                    if (i >= '9') {
+                        uploadImageAsPromise(imageFile);
+                        alert('Your Images have been submitted');
+                        $("#submit").attr('disabled','disa');
                     }
-                    uploadImageAsPromise(imageFile);
                 }
-                alert('Your Images have been submitted');
             } else {
                 alert('Sory! You select invalid file OR there is a file are not image!');
             }
@@ -58,10 +57,11 @@ function uploadImageAsPromise(imageFile) {
                 function progress(snapshot) {
                     var percentage = snapshot.bytesTransferred / snapshot.totalBytes * 100;
                     uploader.value = percentage;
-
+                    $(".loading").show(200);
 //                    $('body').append("<progress value='" + percentage + "' max='100' id='uploader' style='-webkit-appearance: none;appearance: none;width: 50%;margin-bottom: 10px;'></progress><div style='color:#000;'>" + imageFile.name + imageFile.size + "</div>");
                     if ($('progress').attr('value') === '100') {
-                        $('#doneBtn').show("slow");                        
+                        $('#doneBtn').show("slow");   
+                        $(".loading").hide(200);
                     }
                 },
                 function error(err) {
@@ -113,6 +113,7 @@ function uploadImageAsPromise(imageFile) {
     }
 
     function addItem() {
+        $('#doneBtn').hide("slow");
         var files = this.files,
                 $upload = $(this).parents(defaults.rootClass),
                 $uploadList = $upload.find(defaults.listClass);
@@ -158,7 +159,7 @@ function uploadImageAsPromise(imageFile) {
 
 $('[data-provide="fileupload"]').fileUpload();
  
-$("#nextpage").on('click', function () {
+$("#doneBtn").on('click', function () {
     if ($("html").attr("lang") === "en") {
         window.location.assign("../en-contact.html");
     } else {
