@@ -36,6 +36,8 @@ ul {
 
 .itemsList a {
   cursor: pointer; }
+.itemsList h3 {
+  margin: 30px 0px; }
 .itemsList .thumbnail:hover {
   box-shadow: 1px 1px 20px #e8650f; }
 .itemsList .thumbnail .caption {
@@ -48,14 +50,22 @@ ul {
 
 .new {
   padding: 25px;
-  background: linear-gradient(to bottom, #e4e2df, #e4e2df);
+  background-color: #FFFEF9;
   color: #777;
-  font-size: 17px; }
+  font-size: 17px;
+  background: url(../images/girls.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
   .new p {
     line-height: 25px; }
   .new img {
     width: 100%;
     height: 300px; }
+
+.howTo h1 {
+  margin: 30px 0px; }
 
 .orangebtn {
   background-color: #e8650f;
@@ -148,41 +158,50 @@ ul {
 .sizeSelect a {
   color: #e8650f; }
 .sizeSelect .bigSize {
+  padding: 15px;
+  /*        img{
+              width: 100%;
+          }*/
   /*        div{
               text-align: $floatLeft;
           }*/ }
   .sizeSelect .bigSize span {
     float: right; }
   .sizeSelect .bigSize h3 {
-    margin-top: 0px; }
+    margin-top: 0px;
+    margin-bottom: 10px; }
   .sizeSelect .bigSize h4 {
     margin-bottom: 0px; }
-  .sizeSelect .bigSize img {
-    width: 100%; }
 .sizeSelect .mediumSize {
+  padding: 15px;
+  /*        img{
+              width: 100%;
+          }*/
   /*        div{
               text-align: $floatLeft;
           }*/ }
   .sizeSelect .mediumSize span {
     float: right; }
   .sizeSelect .mediumSize h3 {
-    margin-top: 0px; }
+    margin-top: 0px;
+    margin-bottom: 10px; }
   .sizeSelect .mediumSize h4 {
     margin-bottom: 0px; }
-  .sizeSelect .mediumSize img {
-    width: 100%; }
 .sizeSelect .smallSize {
+  padding: 15px;
+  /*        img{
+              width: 100%;
+          }*/
   /*        div{
               text-align: $floatLeft;
           }*/ }
   .sizeSelect .smallSize span {
     float: right; }
   .sizeSelect .smallSize h3 {
-    margin-top: 0px; }
+    margin-top: 0px;
+    margin-bottom: 10px; }
   .sizeSelect .smallSize h4 {
     margin-bottom: 0px; }
-  .sizeSelect .smallSize img {
-    width: 100%; }
 
 .slider {
   height: 300px; }
@@ -192,11 +211,6 @@ ul {
     height: 300px; }
 
 @media (max-width: 767px) {
-  .sizeSelect .mediumSize {
-    padding-top: 0px; }
-  .sizeSelect .smallSize {
-    padding-top: 0px; }
-
   .bigSize {
     border-bottom: 1px solid #e8650f; }
 

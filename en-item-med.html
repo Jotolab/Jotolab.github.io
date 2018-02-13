@@ -41,15 +41,15 @@
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="nav navbar-nav">
                             <li><a class="lang" href="index.html" data-key="home">Home<span class="sr-only">(current)</span></a></li>
-                            <li><a class="lang" href="#products" data-key="prod">Products</a></li>
-                            <li><a class="lang" href="#" data-key="about">About</a></li>
-                            <li><a class="lang" href="#howto" data-key="howto">How to use</a></li>
-                            <li><a class="lang" href="en-contact.html" data-key="contact">Contact us</a></li>
+                            <li><a class="lang" href="index.html#products">Products</a></li>
+                            <li><a class="lang" href="" data-key="about">About</a></li>
+                            <li><a class="lang" href="index.html#howto">How to use</a></li>
+                            <li><a class="lang" href="en-contact.html">Contact us</a></li>
                         </ul>
 
                         <ul class="nav navbar-nav navbar-right rightMenu">
                             <li><a class="translate lang" href="ar-item-med.html" id="ar" data-key="arabic" style="font-weight: bold;">عربي <i class="fa fa-globe" aria-hidden="true"></i></a></li>
-<!--                            <li><a class="translate lang" href="en-item-med.html" id="en" data-key="english" style="font-weight: bold;">En</a></li>-->
+                            <!--                            <li><a class="translate lang" href="en-item-med.html" id="en" data-key="english" style="font-weight: bold;">En</a></li>-->
                             <li><a href="https://www.facebook.com/jotolab/" class="social" target="_blank"><img src="images/fb.png" width="30"></a></li>
                             <li><a href="#" class="social" target="_blank"><img src="images/insta.png" width="30"></a></li>
                             <li><a href="#" class="social" target="_blank"><img src="images/go.png" width="30"></a></li>
@@ -61,15 +61,15 @@
             </nav>
         </div><!-- /.navigation -->
 
-        
-<!--        <div class="container-fluid">
-            <div class="row">
-                <div class="banner">
-                    <h3 class="text-center">Upload 20 photos "Medium Size" and GET 5 photos for FREE!</h3>
-                </div>
-            </div>
-        </div>--> 
-       
+
+        <!--        <div class="container-fluid">
+                    <div class="row">
+                        <div class="banner">
+                            <h3 class="text-center">Upload 20 photos "Medium Size" and GET 5 photos for FREE!</h3>
+                        </div>
+                    </div>
+                </div>--> 
+
         <div class="container-fluid itemIntro">
             <ul>
                 <li class="col-md-6 slider">
@@ -134,17 +134,17 @@
                 </li>
                 <li class="col-md-6" style="display: flex;">
                     <i class="fa fa-car fa-3x" aria-hidden="true"></i>
-                        <ul style="display: inline-grid;">
-                            <li>&nbsp;<b> Delivery</b></li>
-                            <li>&nbsp;&nbsp;free</li>
-                        </ul>
+                    <ul style="display: inline-grid;">
+                        <li>&nbsp;<b> Delivery</b></li>
+                        <li>&nbsp;&nbsp;free</li>
+                    </ul>
                 </li>
-<!--                <li class="col-md-6 col-xs-12">
-                    <form action="uploadImages/en-index.html" method="GET">
-                        <input type="hidden" name="pg" value="medium Size">
-                    <button id="selectbtn" class="btn btn-default orangebtn btn-lg btn-block">Select</button>
-                    </form>
-                </li>-->
+                <!--                <li class="col-md-6 col-xs-12">
+                                    <form action="uploadImages/en-index.html" method="GET">
+                                        <input type="hidden" name="pg" value="medium Size">
+                                    <button id="selectbtn" class="btn btn-default orangebtn btn-lg btn-block">Select</button>
+                                    </form>
+                                </li>-->
             </ul>
         </div>
 
@@ -155,35 +155,57 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-md-12 sizeSelect">
                     <div class="col-md-4 col-sm-5 col-xs-12 text-center bigSize">
-                        <a href="uploadImages/en-index.html"><img src="images/2free.jpg" width="300px"></a>
-                        <div class="caption text-center">
-                            <h4 class="">Price</h4>
-                            <h3 class="lead">20.00 JD <small>save 10%</small></h3>
-                        </div>
+                        <form action="uploadImages/en-index.html">
+                            <img src="images/2free.jpg" width="300px">
+                            <div class="caption text-center">
+                                <h4 class="">Price</h4>
+                                <h3 class="lead">20.00 JD <small>save 10%</small></h3>
+                            </div>
+                            <input type="hidden" name="pn" value="10 Photos / 2 FREE">
+                            <input type="hidden" name="in" value="Medium Size">
+                            <input type="hidden" name="is" value="13 x 18cm">
+                            <input type="hidden" name="qty" value="1">
+                            <input type="hidden" name="total" value="20 JOD">
+                            <input type="submit"value="Order">
+                        </form>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 text-center mediumSize">
-                        <a href="uploadImages/en-index.html"><img src="images/5free.jpg" width="300px"></a>
-                        <div class="caption text-center">
-                            <h4 class="">Price</h4>
-                            <h3 class="lead">40.00 JD <small>save 10%</small></h3>
-                        </div>
+                        <form action="uploadImages/en-index.html"><img src="images/5free.jpg" width="300px">
+                            <div class="caption text-center">
+                                <h4 class="">Price</h4>
+                                <h3 class="lead">40.00 JD <small>save 10%</small></h3>
+                            </div>
+                            <input type="hidden" name="pn" value="20 Photos / 5 FREE">
+                            <input type="hidden" name="in" value="Medium Size">
+                            <input type="hidden" name="is" value="13 x 18cm">
+                            <input type="hidden" name="qty" value="1">
+                            <input type="hidden" name="total" value="40 JOD">
+                            <input type="submit"value="Order">
+                        </form>
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 text-center smallSize">
-                        <a href="uploadImages/en-index.html"><img src="images/20free.jpg" width="300px"></a>
-                        <div class="caption text-center">
-                            <h4 class="">Price</h4>
-                            <h3 class="lead">100.00 JD <small>save 20%</small></h3>
-                        </div>
+                        <form action="uploadImages/en-index.html"><img src="images/20free.jpg" width="300px">
+                            <div class="caption text-center">
+                                <h4 class="">Price</h4>
+                                <h3 class="lead">100.00 JD <small>save 20%</small></h3>
+                            </div>
+                            <input type="hidden" name="pn" value="50 Photos / 20 FREE">
+                            <input type="hidden" name="in" value="Medium Size">
+                            <input type="hidden" name="is" value="13 x 18cm">
+                            <input type="hidden" name="qty" value="1">
+                            <input type="hidden" name="total" value="100 JOD">
+                            <input type="submit"value="Order">
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        
+
 
         <div class="itemdetails">
             <div class="container">
@@ -244,15 +266,15 @@
                             <p><b>Products</b></p>
                             <table>
                                 <tr>
-                                    <td>Item One</td>
-                                    <td>Item One</td>
+                                    <td><a href="en-item-small.html">Small Size</a></td>
+                                    <td><a href="en-item-custom.html">Custom Order</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Item One</td>
-                                    <td>Item One</td>
+                                    <td><a href="en-item-med.html">Medium Size</a></td>
+                                    <!--                                    <td>Item One</td>-->
                                 </tr>
                                 <tr>
-                                    <td>Item One</td>
+                                    <td><a href="en-item-big.html">Big Size</a></td>
                                 </tr>
                             </table>
 
@@ -261,15 +283,15 @@
                             <p><b>Menu</b></p>
                             <table>
                                 <tr>
-                                    <td><a href="index.html" data-key="home">Home<span class="sr-only">(current)</span></a></td>
-                                    <td><a href="#howto" data-key="howto">How to use</a></td>
+                                    <td><a href="index.html">Home<span class="sr-only">(current)</span></a></td>
+                                    <td><a href="index.html#howto">How to use</a></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="#products" data-key="prod">Products</a></td>
-                                    <td><a href="en-contact.html" data-key="contact">Contact us</a></td>
+                                    <td><a href="index.html#products">Products</a></td>
+                                    <td><a href="en-contact.html">Contact us</a></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="#" data-key="about">About</a></td>
+                                    <td><a href="#">About</a></td>
                                     <td><a href="ar-item-med.html">عربي <i class="fa fa-globe" aria-hidden="true"></i></a></td>
                                 </tr>
                             </table>
