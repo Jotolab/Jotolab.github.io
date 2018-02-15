@@ -87,7 +87,7 @@ ul{
 }
 
 
-.howTo, .itemsList, .bestApp, .new, .footer, .itemIntro, .fullDescription, .summary, .itemDetails {
+.howTo, .itemsList, .bestApp, .new, .footer, .itemIntro, .fullDescription, .summary, .itemReview {
     ul{
         list-style: none;
     }
@@ -156,7 +156,8 @@ ul{
         margin: 0px 5px;
     }
 }
-.itemDetails{
+.itemReview{
+    display: none;
     border: 1px dotted $orange;
     background-color: #f3f2f2;
     a {
@@ -192,6 +193,9 @@ ul{
     padding: 50px;
     background-color:#F5F8FF;
     margin-top: 10px;
+    .descText{
+        line-height: 1.5
+    }
 }
 
 .image{
@@ -201,13 +205,22 @@ ul{
     .stars{
         padding:15px 0px;
     }
+    .samsungImg img{
+            width: 150px;
+        }
+    .iphoneImg img{
+            width: 143px;
+        }
 }
 .fullDescription{
+    padding: $descriptionPadding;
+    font-size: 17px;
     p{
         line-height:25px;
     }
-    padding: $descriptionPadding;
-    font-size: 17px;
+    img{
+        width: 100%;
+    }
 }
 
 .summary {
@@ -252,12 +265,12 @@ ul{
         h4{
             margin-bottom: 0px;
         }
-/*        img{
-            width: 100%;
-        }*/
-/*        div{
-            text-align: $floatLeft;
-        }*/
+        /*        img{
+                    width: 100%;
+                }*/
+        /*        div{
+                    text-align: $floatLeft;
+                }*/
     }
     .mediumSize {
         padding:15px;
@@ -271,12 +284,12 @@ ul{
         h4{
             margin-bottom: 0px;
         }
-/*        img{
-            width: 100%;
-        }*/
-/*        div{
-            text-align: $floatLeft;
-        }*/
+        /*        img{
+                    width: 100%;
+                }*/
+        /*        div{
+                    text-align: $floatLeft;
+                }*/
     }
     .smallSize{
         padding:15px;
@@ -290,23 +303,23 @@ ul{
         h4{
             margin-bottom: 0px;
         }
-/*        img{
-            width: 100%;
-        }*/
-/*        div{
-            text-align: $floatLeft;
-        }*/
+        /*        img{
+                    width: 100%;
+                }*/
+        /*        div{
+                    text-align: $floatLeft;
+                }*/
     }
 }
 .slider{
-        height: 300px;
-        .carousel-inner {
-           height: 300px; 
-        }
-        .item img {
-           height: 300px; 
-        }
+    height: 300px;
+    .carousel-inner {
+        height: 300px; 
     }
+    .item img {
+        height: 300px; 
+    }
+}
 
 
 //======== @media Screens ===========
@@ -325,10 +338,29 @@ ul{
     .slider{
         height: 200px;
         .carousel-inner {
-           height: 200px; 
+            height: 200px; 
         }
         .item img {
-           height: 200px; 
+            height: 200px; 
+        }
+    }
+}
+@media (max-width:$media-tablet){
+    .itemIntro{
+        margin-bottom: 25px;
+    }
+    .priceBlock{
+        margin-top: 25px;
+    }
+    .sizeSelect{
+        .bigSize img{
+            width: 200px;
+        }
+        .mediumSize img{
+            width: 200px;
+        }
+        .smallSize img{
+            width: 200px;
         }
     }
 }
@@ -336,6 +368,16 @@ ul{
     .mediumSize {
         border-right:1px solid $orange;
         border-left:1px solid $orange;
+    }
+    .fullDescription{
+        .descMedImage{
+            height: 400px;
+        }
+    }
+    .itemdetails{
+        .descText{
+            padding: 0px 100px;
+        }
     }
 }
 //======== Classes to Extend ========

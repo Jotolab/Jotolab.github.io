@@ -14,8 +14,11 @@
 --------------------------*/
 
 body {
-    padding: 50px;
+    padding: 0px 50px 50px 50px;
     background-color: #fff;
+}
+.logo{
+    margin: 20px 0px;
 }
 
 .file-upload {
@@ -97,4 +100,14 @@ h3{
     background-color: #fff;
     color: #e8650f;
     border: 1px solid #e8650f;
+}
+
+.footer{
+    margin-top: 35px;
+}
+.footer ul{
+    list-style: none;
+}
+.footer a{
+    color:#e8650f;
 }

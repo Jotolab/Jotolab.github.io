@@ -40,10 +40,10 @@
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="nav navbar-nav">
                             <li><a class="lang" href="index.html" data-key="home">Home<span class="sr-only">(current)</span></a></li>
-                            <li><a class="lang" href="#products" data-key="prod">Products</a></li>
-                            <li><a class="lang" href="#" data-key="about">About</a></li>
-                            <li><a class="lang" href="#howto" data-key="howto">How to use</a></li>
-                            <li><a class="lang" href="en-contact.html" data-key="contact">Contact us</a></li>
+                            <li><a class="lang" href="index.html#products">Products</a></li>
+                            <li><a class="lang" href="" data-key="about">About</a></li>
+                            <li><a class="lang" href="index.html#howto">How to use</a></li>
+                            <li><a class="lang" href="en-contact.html">Contact us</a></li>
                         </ul>
 
                         <ul class="nav navbar-nav navbar-right rightMenu">
@@ -60,7 +60,7 @@
             </nav>
         </div><!-- /.navigation -->
 
-        <div class="container itemDetails">
+        <div class="container itemReview">
             <div class="row">
                 <div class="col-md-12">
                     <ul>
@@ -86,7 +86,7 @@
                             <a class="removebtn"><i class="fa fa-trash-o fa-3x" aria-hidden="true"></i></a>
                         </li>
                     </ul>
-                </div> <!--itemDetails -->
+                </div> <!--itemReview -->
             </div>
         </div> <!-- conatiner -->
 
@@ -95,7 +95,7 @@
                 <div class="row">
                     <ul>
                         <li class="col-md-7 col-sm-12 col-xs-12 info">
-                            <h3>Give us you Info please</h3>
+                            <h3>Give us your Info please</h3>
                             <small><span class="reqstar">*</span>Required Fields</small>
                             <form class="form-horizontal">
                                 <div class="form-group">
@@ -243,6 +243,13 @@ $.urlParam = function(name){
         $("#itemSize").append('<p>'+isValue+'</p>');
         $("#qty").append('<p>'+qtyValue+'</p>');
         $("#total").append('<p><b>'+totalValue+'</b></p>');
+        
+        //Check if there photos are uploaded to show itemReview
+        if(inValue == 'null'){
+            $(".itemReview").hide();
+        }else {
+            $(".itemReview").show();
+        }
                        
         </script>
     </body>

@@ -43,9 +43,9 @@ ul {
 .itemsList .thumbnail .caption {
   color: #777; }
 
-.howTo ul, .itemsList ul, .bestApp ul, .new ul, .footer ul, .itemIntro ul, .fullDescription ul, .summary ul, .itemDetails ul {
+.howTo ul, .itemsList ul, .bestApp ul, .new ul, .footer ul, .itemIntro ul, .fullDescription ul, .summary ul, .itemReview ul {
   list-style: none; }
-.howTo ul li, .itemsList ul li, .bestApp ul li, .new ul li, .footer ul li, .itemIntro ul li, .fullDescription ul li, .summary ul li, .itemDetails ul li {
+.howTo ul li, .itemsList ul li, .bestApp ul li, .new ul li, .footer ul li, .itemIntro ul li, .fullDescription ul li, .summary ul li, .itemReview ul li {
   float: left; }
 
 .new {
@@ -98,15 +98,16 @@ ul {
 .socialButtons ul li {
   margin: 0px 5px; }
 
-.itemDetails {
+.itemReview {
+  display: none;
   border: 1px dotted #e8650f;
   background-color: #f3f2f2; }
-  .itemDetails a {
+  .itemReview a {
     cursor: pointer;
     color: #777; }
-  .itemDetails a:hover {
+  .itemReview a:hover {
     color: #e8650f; }
-  .itemDetails i {
+  .itemReview i {
     margin-top: 25px; }
 
 .banner {
@@ -125,18 +126,26 @@ ul {
   padding: 50px;
   background-color: #F5F8FF;
   margin-top: 10px; }
+  .itemdetails .descText {
+    line-height: 1.5; }
 
 .image {
   margin-top: 20px; }
 
 .bestApp .stars {
   padding: 15px 0px; }
+.bestApp .samsungImg img {
+  width: 150px; }
+.bestApp .iphoneImg img {
+  width: 143px; }
 
 .fullDescription {
   padding: 25px;
   font-size: 17px; }
   .fullDescription p {
     line-height: 25px; }
+  .fullDescription img {
+    width: 100%; }
 
 .summary h3 {
   margin-bottom: 5px;
@@ -226,10 +235,29 @@ ul {
       height: 200px; }
     .slider .item img {
       height: 200px; } }
+@media (max-width: 990px) {
+  .itemIntro {
+    margin-bottom: 25px; }
+
+  .priceBlock {
+    margin-top: 25px; }
+
+  .sizeSelect .bigSize img {
+    width: 200px; }
+  .sizeSelect .mediumSize img {
+    width: 200px; }
+  .sizeSelect .smallSize img {
+    width: 200px; } }
 @media (min-width: 767px) {
   .mediumSize {
     border-right: 1px solid #e8650f;
-    border-left: 1px solid #e8650f; } }
+    border-left: 1px solid #e8650f; }
+
+  .fullDescription .descMedImage {
+    height: 400px; }
+
+  .itemdetails .descText {
+    padding: 0px 100px; } }
 .free, .itemsList span {
   color: red; }
 
