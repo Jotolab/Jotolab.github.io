@@ -101,7 +101,9 @@ h3{
     color: #e8650f;
     border: 1px solid #e8650f;
 }
-
+.shippingFee{
+    display: none;
+}
 .footer{
     margin-top: 35px;
 }

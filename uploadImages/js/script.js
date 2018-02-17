@@ -24,7 +24,9 @@ $("input[name='is']").attr('value', isValue);
 $("input[name='qty']").attr('value', qtyValue);
 $("input[name='total']").attr('value', totalValue);
 
-
+if (pnValue === "Custome Order") {
+        $(".shippingFee").show();
+    }
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyBasVDeO5TNFnFX-wB0MBr_Fh_vRCKYbOM",
@@ -64,8 +66,10 @@ $('#submit').on('click', function (e) {
             fileCheck(imgIndex);
         }
     } else if (pnValue == "Custome Order") {
-        imgIndex = 50;
+        imgIndex = 0;
         fileCheck(imgIndex);
+        $("input[name='qty']").attr('value', fileButton.files.length);
+        $("input[name='total']").attr('value', fileButton.files.length * totalValue + 2 + ' JD');
     }
 });
 
@@ -112,8 +116,12 @@ function uploadImageAsPromise(imageFile) {
                     uploader.value = percentage;
                     $(".loading").show(200);
 //                    $('body').append("<progress value='" + percentage + "' max='100' id='uploader' style='-webkit-appearance: none;appearance: none;width: 50%;margin-bottom: 10px;'></progress><div style='color:#000;'>" + imageFile.name + imageFile.size + "</div>");
+                    // When progress bar become 100
                     if ($('progress').attr('value') === '100') {
-                        $('#doneBtn').show("slow");
+                        $('#doneBtn').fadeIn(200);
+                        $('html, body').animate({
+                            scrollTop: $("#doneBtn").offset().top
+                         }, 1000);
                         $(".loading").hide(200);
                     }
                 },
@@ -166,7 +174,7 @@ function uploadImageAsPromise(imageFile) {
     }
 
     function addItem() {
-        $('#doneBtn').hide("slow");
+        $('#doneBtn').fadeOut(200);
         var files = this.files,
                 $upload = $(this).parents(defaults.rootClass),
                 $uploadList = $upload.find(defaults.listClass);

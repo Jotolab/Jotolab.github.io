@@ -160,13 +160,13 @@ ul{
     border-radius: 20px;
     font-weight: 300;
     opacity: 0;
+    width: 40%;
     position: relative;
     top: 130px;
     z-index: 2;
 }
 .clickBtn:hover{
     color: $white;
-    width: 40%;
 }
 .footer{
     background-color: $orange;

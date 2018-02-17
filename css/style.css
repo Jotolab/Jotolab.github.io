@@ -103,13 +103,13 @@ ul {
   border-radius: 20px;
   font-weight: 300;
   opacity: 0;
+  width: 40%;
   position: relative;
   top: 130px;
   z-index: 2; }
 
 .clickBtn:hover {
-  color: #F5F8FF;
-  width: 40%; }
+  color: #F5F8FF; }
 
 .footer {
   background-color: #e8650f;
