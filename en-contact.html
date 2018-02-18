@@ -31,7 +31,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="home.html">
                             <img src="images/logo-lg3.jpeg" width="170px">
                         </a>
                     </div>
@@ -39,10 +39,10 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="nav navbar-nav">
-                            <li><a class="lang" href="index.html" data-key="home">Home<span class="sr-only">(current)</span></a></li>
-                            <li><a class="lang" href="index.html#products">Products</a></li>
+                            <li><a class="lang" href="home.html" data-key="home">Home<span class="sr-only">(current)</span></a></li>
+                            <li><a class="lang" href="home.html#products">Products</a></li>
                             <li><a class="lang" href="" data-key="about">About</a></li>
-                            <li><a class="lang" href="index.html#howto">How to use</a></li>
+                            <li><a class="lang" href="home.html#howto">How to use</a></li>
                             <li><a class="lang" href="en-contact.html">Contact us</a></li>
                         </ul>
 
@@ -97,42 +97,42 @@
                         <li class="col-md-7 col-sm-12 col-xs-12 info">
                             <h3>Give us your Info please</h3>
                             <small><span class="reqstar">*</span>Required Fields</small>
-                            <form class="form-horizontal">
+                            <form class="form-horizontal" method="post" action="send_form_email.php">
                                 <div class="form-group">
-                                    <p class="col-sm-2 form-control-static">First Name<span class="reqstar">*</span></p>
+                                    <label class="col-sm-2 form-control-static" for="first_name">First Name<span class="reqstar">*</span></label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="firstName" placeholder="Your First Name..." required>
+                                        <input type="text" name="first_name" class="form-control" id="firstName" placeholder="Your First Name..." required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <p class="col-sm-2 form-control-static">Last Name<span class="reqstar">*</span></p>
+                                    <label for="last_name" class="col-sm-2 form-control-static">Last Name<span class="reqstar">*</span></label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="lastName" placeholder="Your Last Name..." required>
+                                        <input type="text" name="last_name" class="form-control" id="lastName" placeholder="Your Last Name..." required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <!--                                <label for="email" class="col-sm-2 control-label">Email*</label>-->
-                                    <p class="col-sm-2 form-control-static">Email</p>
+                                    <!--<label for="email" class="col-sm-2 control-label">Email*</label>-->
+                                    <label for="email" class="col-sm-2 form-control-static">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="email" placeholder="example@domain.com">
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="example@domain.com">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <p class="col-sm-2 form-control-static">Address<span class="reqstar">*</span></p>
+                                    <label for="address" class="col-sm-2 form-control-static">Address<span class="reqstar">*</span></label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="address" placeholder="Your Address to deliver" required>
+                                        <input type="text" name="address" class="form-control" id="address" placeholder="Your Address to deliver" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <p class="col-sm-2 form-control-static">Phone Number<span class="reqstar">*</span></p>
+                                    <label for="telephone" class="col-sm-2 form-control-static">Phone Number<span class="reqstar">*</span></label>
                                     <div class="col-sm-10">
-                                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Your Phone Number..." value="+962" required>
+                                        <input type="tel" name="telephone" class="form-control" id="phoneNumber" placeholder="Your Phone Number..." value="+962" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <p class="col-sm-2 form-control-static">Comment</p>
+                                    <label for="comments" class="col-sm-2 form-control-static">Comment</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" placeholder="Any additional comment..."></textarea>
+                                        <textarea class="form-control" name="comments" placeholder="Any additional comment..."></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -155,8 +155,7 @@
             </div>
         </div> <!-- Summary -->
         
-        <a href="contactform.htm">Form</a>
-
+        
         <div class="footer">
             <div class="container-fluid">
                 <div class="row">
@@ -185,11 +184,11 @@
                             <p><b>Menu</b></p>
                             <table>
                                 <tr>
-                                    <td><a href="index.html">Home<span class="sr-only">(current)</span></a></td>
-                                    <td><a href="index.html#howto">How to use</a></td>
+                                    <td><a href="home.html">Home<span class="sr-only">(current)</span></a></td>
+                                    <td><a href="home.html#howto">How to use</a></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="index.html#products">Products</a></td>
+                                    <td><a href="home.html#products">Products</a></td>
                                     <td><a href="en-contact.html">Contact us</a></td>
                                 </tr>
                                 <tr>

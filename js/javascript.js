@@ -44,10 +44,10 @@ $(document).ready(function () {
         if ($("html").attr("lang") === "en") {
             url = url.split('&')[0];
             history.pushState(null, null, url.replace(/&view=.*(&?)/, '$1'));
-            $('.itemReview').html("<div class='col-md-12'><h4>The images have been removed, There are no photos selected! <a class='small' href='index.html'>back to home</a></h4></div>");
+            $('.itemReview').html("<div class='col-md-12'><h4>The images have been removed, There are no photos selected! <a class='small' href='home.html'>back to home</a></h4></div>");
             $('.summary').css('visibility', 'hidden');
         } else {
-            $('.itemReview').html("<div class='col-md-12'><h4>تم حذف المنتج، لا يوجد هناك صور مختارة! <a class='small' href='index.html'>العودة الى الرئيسية</a></h4></div>");
+            $('.itemReview').html("<div class='col-md-12'><h4>تم حذف المنتج، لا يوجد هناك صور مختارة! <a class='small' href='home.html'>العودة الى الرئيسية</a></h4></div>");
             $('.summary').css('visibility', 'hidden');
             url = url.split('&')[0];
             history.pushState(null, null, url.replace(/&view=.*(&?)/, '$1'));
