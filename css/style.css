@@ -30,7 +30,7 @@ ul {
   margin-top: -20px;
   align-items: center; }
   .coverphoto .cover-block {
-    padding-top: 250px; }
+    padding-top: 50px; }
   .coverphoto img {
     margin: 10px; }
 
@@ -250,6 +250,24 @@ ul {
   .slider .item img {
     height: 300px; }
 
+#ppBody {
+  font-size: 11pt;
+  width: 100%;
+  margin: 0 auto;
+  text-align: justify; }
+
+#ppHeader {
+  font-family: verdana;
+  font-size: 21pt;
+  width: 100%;
+  margin: 0 auto; }
+
+.ppConsistencies {
+  display: none; }
+
+.policy {
+  margin-bottom: 15px; }
+
 @media (max-width: 767px) {
   .bigSize {
     border-bottom: 1px solid #e8650f; }
@@ -265,7 +283,10 @@ ul {
     .slider .carousel-inner {
       height: 200px; }
     .slider .item img {
-      height: 200px; } }
+      height: 200px; }
+
+  .policy {
+    margin: 0px 15px 10px 15px; } }
 @media (max-width: 990px) {
   .itemIntro {
     margin-bottom: 25px; }
