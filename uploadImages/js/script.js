@@ -25,8 +25,8 @@ $("input[name='qty']").attr('value', qtyValue);
 $("input[name='total']").attr('value', totalValue);
 
 if (pnValue === "Custome Order") {
-        $(".shippingFee").show();
-    }
+    $(".shippingFee").show();
+}
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyBasVDeO5TNFnFX-wB0MBr_Fh_vRCKYbOM",
@@ -46,7 +46,7 @@ $('#submit').on('click', function (e) {
         if (fileButton.files.length > 12 || fileButton.files.length < 10) {
             alert("Upload Only 10 Photos! Dont forget 2 photos free");
         } else {
-            var imgIndex = 9;
+            var imgIndex = 11;
             fileCheck(imgIndex);
         }
 
@@ -54,7 +54,7 @@ $('#submit').on('click', function (e) {
         if (fileButton.files.length > 25 || fileButton.files.length < 20) {
             alert("Upload Only 20 Photos! Dont forget 5 photos free");
         } else {
-            imgIndex = 19;
+            imgIndex = 24;
             fileCheck(imgIndex);
         }
 
@@ -62,11 +62,11 @@ $('#submit').on('click', function (e) {
         if (fileButton.files.length > 70 || fileButton.files.length < 50) {
             alert("Upload Only 50 Photos! Dont forget 20 photos free");
         } else {
-            imgIndex = 49;
+            imgIndex = 69;
             fileCheck(imgIndex);
         }
     } else if (pnValue == "Custome Order") {
-        imgIndex = 0;
+        imgIndex = 100;
         fileCheck(imgIndex);
         $("input[name='qty']").attr('value', fileButton.files.length);
         $("input[name='total']").attr('value', fileButton.files.length * totalValue + 2 + ' JD');
@@ -89,23 +89,21 @@ function fileCheck(imgIndex) {
             //Get files
             for (var i = 0; i < fileButton.files.length; i++) {
                 var imageFile = fileButton.files[i];
-                if (i >= imgIndex) {
-                    uploadImageAsPromise(imageFile);
-                    alert('Your Images have been submitted');
+                uploadImageAsPromise(imageFile, imgIndex);
+//                    alert('Your Images have been submitted');
                     $("#submit").attr('disabled', 'disabled');
-                }
             }
         } else {
-            alert('Sory! You select invalid file OR there is a file is not image!');
+            alert('Sory! You select invalid file OR there is a file are not image!');
         }
     }
-};
+}
+;
 
 //Handle waiting to upload each file using promise
-function uploadImageAsPromise(imageFile) {
+function uploadImageAsPromise(imageFile, imgIndex) {
     return new Promise(function (resolve, reject) {
         var storageRef = firebase.storage().ref("Jotolabphotos/" + imageFile.name);
-
         //Upload file
         var task = storageRef.put(imageFile);
 
@@ -114,15 +112,13 @@ function uploadImageAsPromise(imageFile) {
                 function progress(snapshot) {
                     var percentage = snapshot.bytesTransferred / snapshot.totalBytes * 100;
                     uploader.value = percentage;
-                    $(".loading").show(200);
-//                    $('body').append("<progress value='" + percentage + "' max='100' id='uploader' style='-webkit-appearance: none;appearance: none;width: 50%;margin-bottom: 10px;'></progress><div style='color:#000;'>" + imageFile.name + imageFile.size + "</div>");
+
+//                    $('body').append("<input type='text' value='" + percentage + "' max='100' id='uploader' style='-webkit-appearance: none;appearance: none;width: 50%;margin-bottom: 10px;'><div style='color:#000;'>" + imageFile.name + imageFile.size + "</div>");
                     // When progress bar become 100
-                    if ($('progress').attr('value') === '100') {
-                        $('#doneBtn').fadeIn(200);
-                        $('html, body').animate({
-                            scrollTop: $("#doneBtn").offset().top
-                         }, 1000);
-                        $(".loading").hide(200);
+                    if ($('#uploader').attr('value') != '100') {
+                        $(".loading").show(200);
+                    } else {
+                        timedOut(imgIndex);
                     }
                 },
                 function error(err) {
@@ -135,6 +131,34 @@ function uploadImageAsPromise(imageFile) {
     });
 }
 
+function timedOut(imgIndex) {
+    if (imgIndex == 11) {
+        $('#doneBtn').delay(20000).fadeIn(200);
+        $(".loading").delay(20000).hide(200);
+        $('html, body').animate({
+            scrollTop: $("#doneBtn").offset().top
+        }, 1000);
+    } else if(imgIndex == 24){
+        $('#doneBtn').delay(25000).fadeIn(200);
+        $(".loading").delay(25000).hide(200);
+        $('html, body').animate({
+            scrollTop: $("#doneBtn").offset().top
+        }, 1000);
+    }else if(imgIndex == 69){
+        $('#doneBtn').delay(35000).fadeIn(200);
+        $(".loading").delay(35000).hide(200);
+        $('html, body').animate({
+            scrollTop: $("#doneBtn").offset().top
+        }, 1000);
+    }else if(imgIndex == 100){
+        $('#doneBtn').delay(15000).fadeIn(200);
+        $(".loading").delay(15000).hide(200);
+        $('html, body').animate({
+            scrollTop: $("#doneBtn").offset().top
+        }, 1000);
+    }
+    return;
+}
 
 (function ($) {
 

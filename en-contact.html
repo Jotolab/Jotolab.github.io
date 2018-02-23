@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="images/logo-large-square.jpeg" type="image/gif" sizes="16x16">
+        <link rel="icon" href="images/logo-large-square.png" type="image/png" sizes="16x16">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Contact Us</title>
 
@@ -31,7 +31,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="home.html">
+                        <a class="navbar-brand" href="index.html">
                             <img src="images/logo-lg3.jpeg" width="170px">
                         </a>
                     </div>
@@ -39,10 +39,10 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="nav navbar-nav">
-                            <li><a class="lang" href="home.html" data-key="home">Home<span class="sr-only">(current)</span></a></li>
-                            <li><a class="lang" href="home.html#products">Products</a></li>
+                            <li><a class="lang" href="index.html" data-key="home">Home<span class="sr-only">(current)</span></a></li>
+                            <li><a class="lang" href="index.html#products">Products</a></li>
                             <li><a class="lang" href="" data-key="about">About</a></li>
-                            <li><a class="lang" href="home.html#howto">How to use</a></li>
+                            <li><a class="lang" href="index.html#howto">How to use</a></li>
                             <li><a class="lang" href="en-contact.html">Contact us</a></li>
                         </ul>
 
@@ -126,7 +126,7 @@
                                 <div class="form-group">
                                     <label for="telephone" class="col-sm-2 form-control-static">Phone Number<span class="reqstar">*</span></label>
                                     <div class="col-sm-10">
-                                        <input type="tel" name="telephone" class="form-control" id="phoneNumber" placeholder="Your Phone Number..." value="+962" required>
+                                        <input type="tel" name="telephone" class="form-control" id="phoneNumber" placeholder="07xxxxxxxx" value="" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -135,9 +135,14 @@
                                         <textarea class="form-control" name="comments" placeholder="Any additional comment..."></textarea>
                                     </div>
                                 </div>
+                                <input type="hidden" class="packageValue" name="packageValue" value="">
+                                <input type="hidden" class="itemValue" name="itemValue" value="">
+                                <input type="hidden" class="sizeValue" name="sizeValue" value="">
+                                <input type="hidden" class="qtyValue" name="qtyValue" value="">
+                                <input type="hidden" class="totalValue" name="totalValue" value="">
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
-                                        <span>By click on order now you are accepting our <a href="terms.html">terms and conditions.</a></span>
+                                        <span class="agreeNote">By click on order now you are accepting our <a href="terms.html">terms and conditions.</a></span>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -184,11 +189,11 @@
                             <p><b>Menu</b></p>
                             <table>
                                 <tr>
-                                    <td><a href="home.html">Home<span class="sr-only">(current)</span></a></td>
-                                    <td><a href="home.html#howto">How to use</a></td>
+                                    <td><a href="index.html">Home<span class="sr-only">(current)</span></a></td>
+                                    <td><a href="index.html#howto">How to use</a></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="home.html#products">Products</a></td>
+                                    <td><a href="index.html#products">Products</a></td>
                                     <td><a href="en-contact.html">Contact us</a></td>
                                 </tr>
                                 <tr>
@@ -239,15 +244,25 @@ $.urlParam = function(name){
         var qtyValue = decodeURIComponent($.urlParam('qty')).replace(/\+/g, ' ');
         var totalValue = decodeURIComponent($.urlParam('total')).replace(/\+/g, ' ');
         
+        //To put the values on item review
         $("#packageNum").append('<p>'+pnValue+'</p>');
         $("#itemName").append('<p>'+inValue+'</p>');
         $("#itemSize").append('<p>'+isValue+'</p>');
         $("#qty").append('<p>'+qtyValue+'</p>');
         $("#total").append('<p><b>'+totalValue+'</b></p>');
         
+        //To send values to email
+        $(".packageValue").attr('value', pnValue);
+        $(".itemValue").attr('value',inValue);
+        $(".sizeValue").attr('value',isValue);
+        $(".qtyValue").attr('value',qtyValue);
+        $(".totalValue").attr('value',totalValue);
+        
         //Check if there photos are uploaded to show itemReview
         if(inValue == 'null'){
             $(".itemReview").hide();
+            $("button[type='submit']").text('Send');
+            $(".agreeNote").hide();
         }else {
             $(".itemReview").show();
         }

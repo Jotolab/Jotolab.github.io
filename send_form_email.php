@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="images/logo-large-square.jpeg" type="image/gif" sizes="16x16">
+        <link rel="icon" href="images/logo-large-square.png" type="image/png" sizes="16x16">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Thank you!</title>
 
@@ -94,37 +94,19 @@ if(isset($_POST['email'])) {
     $last_name = $_POST['last_name']; // required
     $email_from = $_POST['email']; // required
     $address_form = $_POST['address']; // required
-    $telephone = $_POST['telephone']; // not required
-    $comments = $_POST['comments']; // required
+    $telephone = $_POST['telephone']; //  required
+    $comments = $_POST['comments']; // not required
+    
+    $packageValue = $_POST['packageValue']; // not required
+    $itemValue = $_POST['itemValue']; // not required
+    $sizeValue = $_POST['sizeValue']; // not required
+    $qtyValue = $_POST['qtyValue']; // not required
+    $totalValue = $_POST['totalValue']; // not required
  
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
  
-  if(!preg_match($email_exp,$email_from)) {
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
-  }
- 
-    $string_exp = "/^[A-Za-z .'-]+$/";
- 
-  if(!preg_match($string_exp,$first_name)) {
-    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
-  }
-  
-  if(!preg_match($string_exp,$last_name)) {
-    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
-  }
-  
-  if(!preg_match($string_exp,$address_form)) {
-    $error_message .= 'The Address you entered does not appear to be valid.<br />';
-  }
- 
-  if(strlen($comments) < 2) {
-    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
-  }
- 
-  if(strlen($error_message) > 0) {
-    died($error_message);
-  }
+
  
     $email_message = "Form details below.\n\n";
  
@@ -142,6 +124,12 @@ if(isset($_POST['email'])) {
     $email_message .= "Address: ".clean_string($address_form)."\n";
     $email_message .= "Telephone: ".clean_string($telephone)."\n";
     $email_message .= "Comments: ".clean_string($comments)."\n";
+    $email_message .= "package name: ".clean_string($packageValue)."\n";
+    $email_message .= "item name: ".clean_string($itemValue)."\n";
+    $email_message .= "size: ".clean_string($sizeValue)."\n";
+    $email_message .= "qty: ".clean_string($qtyValue)."\n";
+    $email_message .= "total: ".clean_string($totalValue)."\n";
+    
  
 // create email headers
 $headers = 'From: '.$email_from."\r\n".
@@ -151,8 +139,10 @@ $headers = 'From: '.$email_from."\r\n".
 ?>
  
 <!-- include your own success html here -->
- 
-Thank you for contacting us. We will be in touch with you very soon.
+ <div class="container">
+ 	<p class="lead">Thank you for contacting us.<br> We will be in touch with you very soon.</p>
+ </div>
+
  
 <?php
  
@@ -160,7 +150,7 @@ Thank you for contacting us. We will be in touch with you very soon.
 ?>
         
         
-        <div class="footer">
+        <div class="footer" style="">
             <div class="container-fluid">
                 <div class="row">
                     <ul>
@@ -214,7 +204,7 @@ Thank you for contacting us. We will be in touch with you very soon.
                 </div>
             </div>
         </div>
-        <div class="col-md-12 text-center"><h6>&copy; 2018 Jotolab. All rights reserved |<a href="policy.html"> Privacy Policy</a> |<a href="terms.html"> Terms Of Ues</a></h6></div>
+        <div class="col-md-12 text-center" style=""><h6>&copy; 2018 Jotolab. All rights reserved |<a href="policy.html"> Privacy Policy</a> |<a href="terms.html"> Terms Of Ues</a></h6></div>
 
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
