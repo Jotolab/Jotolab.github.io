@@ -309,7 +309,11 @@ ul {
     height: 400px; }
 
   .itemdetails .descText {
-    padding: 0px 100px; } }
+    padding: 0px 100px; }
+
+  .introVideo iframe {
+    width: 450px;
+    height: 260px; } }
 .free {
   color: red; }
 
