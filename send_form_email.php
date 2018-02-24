@@ -41,7 +41,7 @@
                         <ul class="nav navbar-nav">
                             <li><a class="lang" href="index.html" data-key="home">Home<span class="sr-only">(current)</span></a></li>
                             <li><a class="lang" href="index.html#products">Products</a></li>
-                            <li><a class="lang" href="" data-key="about">About</a></li>
+                            <li><a class="lang" href="index.html#aboutus" data-key="about">About</a></li>
                             <li><a class="lang" href="index.html#howto">How to use</a></li>
                             <li><a class="lang" href="en-contact.html">Contact us</a></li>
                         </ul>
@@ -139,8 +139,8 @@ $headers = 'From: '.$email_from."\r\n".
 ?>
  
 <!-- include your own success html here -->
- <div class="container">
- 	<p class="lead">Thank you for contacting us.<br> We will be in touch with you very soon.</p>
+ <div class="container thanksText">
+ 	<p class="lead">Thank you :)<br> We will be in touch with you very soon.</p>
  </div>
 
  
@@ -186,7 +186,7 @@ $headers = 'From: '.$email_from."\r\n".
                                     <td><a href="en-contact.html">Contact us</a></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="#">About</a></td>
+                                    <td><a href="index.html#aboutus">About</a></td>
 <!--                                    <td><a href="ar-contact.html">عربي <i class="fa fa-globe" aria-hidden="true"></i></a></td>-->
                                 </tr>
                             </table>

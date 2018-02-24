@@ -313,7 +313,10 @@ ul {
 
   .introVideo iframe {
     width: 450px;
-    height: 260px; } }
+    height: 260px; }
+
+  .thanksText {
+    height: 295px; } }
 .free {
   color: red; }
 
