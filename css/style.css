@@ -299,8 +299,15 @@ ul {
   .sizeSelect .mediumSize img {
     width: 200px; }
   .sizeSelect .smallSize img {
-    width: 200px; } }
-@media (min-width: 767px) {
+    width: 200px; }
+
+  .howTo .arrowimg img {
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Safari 3-8 */
+    transform: rotate(90deg); } }
+@media (min-width: 769px) {
   .mediumSize {
     border-right: 1px solid #e8650f;
     border-left: 1px solid #e8650f; }
@@ -316,7 +323,10 @@ ul {
     height: 260px; }
 
   .thanksText {
-    height: 295px; } }
+    height: 295px; }
+
+  .howTo .arrowimg img {
+    margin-top: 50px; } }
 .free {
   color: red; }
 

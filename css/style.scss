@@ -6,7 +6,7 @@ $jotolabFont: HelveticaNeue-Light, Arial;
 $descriptionPadding:25px;
 $media-mobile:767px;
 $media-tablet:990px;
-$media-laptop:767px;
+$media-laptop:769px;
 $direction: ltr;
 $floatLeft: left;
 $floatRight: right;
@@ -407,6 +407,7 @@ ul{
     .policy {
         margin: 0px 15px 10px 15px;
     }
+    
 }
 @media (max-width:$media-tablet){
     .itemIntro{
@@ -424,6 +425,13 @@ ul{
         }
         .smallSize img{
             width: 200px;
+        }
+    }
+    .howTo {
+        .arrowimg img{
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -webkit-transform: rotate(90deg); /* Safari 3-8 */
+            transform: rotate(90deg);  
         }
     }
 }
@@ -448,6 +456,11 @@ ul{
     }
     .thanksText{
         height: 295px;
+    }
+    .howTo {
+        .arrowimg img{
+           margin-top: 50px; 
+        }
     }
 }
 //======== Classes to Extend ========
