@@ -140,6 +140,8 @@ ul {
     color: #e8650f; }
   .itemReview i {
     margin-top: 25px; }
+  .itemReview .invoice {
+    margin-top: 10px; }
 
 .banner {
   background-color: #e8650f; }
