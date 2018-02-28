@@ -142,6 +142,7 @@
                                 <input type="hidden" class="sizeValue" name="sizeValue" value="">
                                 <input type="hidden" class="qtyValue" name="qtyValue" value="">
                                 <input type="hidden" class="totalValue" name="totalValue" value="">
+                                <input type="hidden" class="folderNumber" name="folderNumber" value="">
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
                                         <span class="agreeNote">By click on order now you are accepting our <a href="terms.html">terms and conditions.</a></span>
@@ -243,6 +244,7 @@ $.urlParam = function(name){
         var inValue = decodeURIComponent($.urlParam('in')).replace(/\+/g, ' ');
         var isValue = decodeURIComponent($.urlParam('is')).replace(/\+/g, ' ');
         var qtyValue = decodeURIComponent($.urlParam('qty')).replace(/\+/g, ' ');
+        var numberValue = decodeURIComponent($.urlParam('number')).replace(/\+/g, ' ');
         var totalValue = decodeURIComponent($.urlParam('total')).replace(/\+/g, ' ');
         
         //To put the values on item review
@@ -257,6 +259,7 @@ $.urlParam = function(name){
         $(".itemValue").attr('value',inValue);
         $(".sizeValue").attr('value',isValue);
         $(".qtyValue").attr('value',qtyValue);
+        $(".folderNumber").attr('value',numberValue);        
         $(".totalValue").attr('value',totalValue);
         
         //Check if there photos are uploaded to show itemReview

@@ -16,12 +16,14 @@ var pnValue = decodeURIComponent($.urlParam('pn')).replace(/\+/g, ' ');
 var inValue = decodeURIComponent($.urlParam('in')).replace(/\+/g, ' ');
 var isValue = decodeURIComponent($.urlParam('is')).replace(/\+/g, ' ');
 var qtyValue = decodeURIComponent($.urlParam('qty')).replace(/\+/g, ' ');
+var numberValue = decodeURIComponent($.urlParam('number')).replace(/\+/g, ' ');
 var totalValue = decodeURIComponent($.urlParam('total')).replace(/\+/g, ' ');
 
 $("input[name='pn']").attr('value', pnValue);
 $("input[name='in']").attr('value', inValue);
 $("input[name='is']").attr('value', isValue);
 $("input[name='qty']").attr('value', qtyValue);
+$("input[name='number']").attr('value', numberValue);
 $("input[name='total']").attr('value', totalValue);
 
 if (pnValue === "Custome Order") {
@@ -101,9 +103,14 @@ function fileCheck(imgIndex) {
 ;
 
 //Handle waiting to upload each file using promise
-function uploadImageAsPromise(imageFile, imgIndex) {
-    return new Promise(function (resolve, reject) {
-        var storageRef = firebase.storage().ref("Jotolabphotos/" + imageFile.name);
+
+// create random number to put it on folder name
+var x = Math.floor((Math.random() * 100000) + 1);
+$("input[name='number'").attr('value', x);
+//Handle waiting to upload each file using promise
+function uploadImageAsPromise(imageFile, imgIndex) {    
+    return new Promise(function (resolve, reject) {        
+        var storageRef = firebase.storage().ref("Jotolabphotos"+x+"/" + imageFile.name);
         //Upload file
         var task = storageRef.put(imageFile);
 

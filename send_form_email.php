@@ -83,6 +83,7 @@ if(isset($_POST['email'])) {
         !isset($_POST['email']) ||
         !isset($_POST['address']) ||
         !isset($_POST['telephone']) ||
+        !isset($_POST['folderNumber']) ||
         !isset($_POST['comments'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
@@ -100,6 +101,7 @@ if(isset($_POST['email'])) {
     $itemValue = $_POST['itemValue']; // not required
     $sizeValue = $_POST['sizeValue']; // not required
     $qtyValue = $_POST['qtyValue']; // not required
+    $folderNumber = $_POST['folderNumber']; // not required
     $totalValue = $_POST['totalValue']; // not required
  
     $error_message = "";
@@ -127,6 +129,7 @@ if(isset($_POST['email'])) {
     $email_message .= "item name: ".clean_string($itemValue)."\n";
     $email_message .= "size: ".clean_string($sizeValue)."\n";
     $email_message .= "qty: ".clean_string($qtyValue)."\n";
+    $email_message .= "Folder Number: ".clean_string($folderNumber)."\n";
     $email_message .= "total: ".clean_string($totalValue)."\n";
     
  
