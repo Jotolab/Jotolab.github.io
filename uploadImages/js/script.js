@@ -106,7 +106,7 @@ function fileCheck(imgIndex) {
 
 // create random number to put it on folder name
 var x = Math.floor((Math.random() * 100000) + 1);
-$("input[name='number'").attr('value', x);
+$("input[name='number']").attr('value', x);
 //Handle waiting to upload each file using promise
 function uploadImageAsPromise(imageFile, imgIndex) {    
     return new Promise(function (resolve, reject) {        
