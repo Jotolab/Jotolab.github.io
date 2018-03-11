@@ -29,6 +29,12 @@ $("input[name='total']").attr('value', totalValue);
 if (pnValue === "Custome Order") {
     $(".shippingFee").show();
 }
+
+// for mothers day promotion
+if(pnValue === "null"){
+    $(".motherdayPromo").show();
+    $(".motherdayPromoText").show();
+}
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyBasVDeO5TNFnFX-wB0MBr_Fh_vRCKYbOM",
@@ -72,6 +78,17 @@ $('#submit').on('click', function (e) {
         fileCheck(imgIndex);
         $("input[name='qty']").attr('value', fileButton.files.length);
         $("input[name='total']").attr('value', fileButton.files.length * totalValue + 2 + ' JD');
+    }
+    // This condition only for mother's day
+    // Remove this condition when this promotion's finish
+    else if (pnValue == "null") {
+        imgIndex = 100;
+        fileCheck(imgIndex);
+        $("input[name='pn']").attr('value', 'Mother&CloseCurlyQuote;s Day Promotion');
+        $("input[name='in']").attr('value','Medium Size');
+        $("input[name='is']").attr('value','13 x 18 cm');
+        $("input[name='qty']").attr('value',fileButton.files.length);
+        $("input[name='total']").attr('value', fileButton.files.length * 10 + ' JD');
     }
 });
 
